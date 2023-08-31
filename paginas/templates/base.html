@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <nav>
+        <ul>
+          <li><a href="#secao1">Seção 1</a></li>
+          <li><a href="#secao2">Seção 2</a></li>
+          <li><a href="#secao3">Seção 3</a></li>
+          <li><a href="#secao4">Seção 4</a></li>
+        </ul>
+      </nav>
+      
+      
+      <section id="secao1">
+        <h1>Seção 1</h1>
+      </section>
+      
+      <section id="secao2">
+        <h1>Seção 2</h1>
+      </section>
+      
+      <section id="secao3">
+        <h1>Seção 3</h1>
+      </section>
+      
+      <section id="secao4">
+        <h1>Seção 4</h1>
+      </section>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
