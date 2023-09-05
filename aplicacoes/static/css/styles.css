@@ -37,18 +37,6 @@ nav ul li a:hover{
     border-bottom: 3px solid white;
 }
 
-section#contato{
-    width: 40%;
-    min-height: 100vh;
-    background-size: cover;
-    background-position: center;
-    margin-left: 30%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 section{
     width: 100%;
     min-height: 100vh;
