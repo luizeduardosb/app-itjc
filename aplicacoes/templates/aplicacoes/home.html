@@ -1,4 +1,39 @@
 {% extends 'base.html' %}
+{% block title %}ITJC{% endblock %}
 
 {% block content %}
+
+<section id="home">
+    <h1>Seção 1</h1>
+</section>
+
+<section id="sobre">
+    <h1>Seção 2</h1>
+</section>
+
+<section id="incubação">
+    <h1>Seção 3</h1>
+</section>
+
+<section id="empresas">
+massa
+</section>
+
+<section id="editais">
+    {% for edital in editais %}
+    <div class="card" style="width: 30rem;">
+        <div class="card-body">
+            <h5 class="card-title"><a href="/edital/{{edital.id}}">{{edital.titulo}}</a></h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+        </div>
+    </div>
+    {% endfor %}
+</section>
+
+<section id="contato">
+    <h1>Seção 6</h1>
+</section>
+
 {% endblock %}
