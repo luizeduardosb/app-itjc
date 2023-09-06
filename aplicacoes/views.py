@@ -8,7 +8,7 @@ def home(request):
 
 def editais(request):
     editais = Edital.objects.all()
-    return render(request, 'aplicacoes/home.html/#editais', {'editais': editais})
+    return render(request, 'aplicacoes/home.html', {'editais': editais})
 
 def editalView(request, id):
     edital = get_object_or_404(Edital, pk=id)
@@ -16,5 +16,10 @@ def editalView(request, id):
 
 def empresas(request):
     empresas = Empresa.objects.all()
-    return render(request, 'aplicacoes/home.html/#empresas', {'empresas': empresas})
+    return render(request, 'aplicacoes/empresas.html', {'empresas': empresas})
+
+def empresalView(request, id):
+    empresa = get_object_or_404(Empresa, pk=id)
+    return render(request, 'aplicacoes/empresa.html', {'empresa': empresa})
+
     

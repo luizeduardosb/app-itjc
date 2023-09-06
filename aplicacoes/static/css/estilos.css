@@ -1,27 +1,56 @@
 /* body */
-*{
+* {
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
     font-family: "Open Sans";
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-/* Menu top */
-nav{
+/* Cabeçalho */
+.cabecalho {
+    background-color: #D9D9D9;
     width: 100%;
-    position: fixed;
-    background: linear-gradient(rgba(0,0,0,0.7), transparent);
-    text-align: center;
-}
-
-nav ul li{
+    height: 100%;
     display: inline-block;
 }
 
-nav ul li a{
+.img {
+    width: 50%;
+    float: left;
+    display: flex;
+    align-items: center;
+}
+
+.img img {
+    width: 20%;
+}
+
+.infos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+
+/* Menu principal */
+nav {
+    width: 100%;
+    position: fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), transparent);
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
     text-decoration: none;
     padding: 5px 0;
     display: inline-block;
@@ -33,15 +62,17 @@ nav ul li a{
     transition: all 0.25s ease-in-out;
 }
 
-nav ul li a:hover{
+nav ul li a:hover {
     border-bottom: 3px solid white;
 }
 
-section{
+/* Seções */
+section {
     width: 100%;
     min-height: 100vh;
     background-size: cover;
     background-position: center;
+    background-color: lightblue;
     border-bottom: 1px solid black;
 
     display: flex;
@@ -49,7 +80,8 @@ section{
     align-items: center;
 }
 
-section h1{
+
+section h1 {
     font-size: 70px;
-    color: white
+    color: black;
 }

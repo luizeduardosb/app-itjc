@@ -3,40 +3,37 @@
 
 {% block content %}
 
-<section id="home">
-    <h1>Seção 1</h1>
+<section id="inicio">
+
 </section>
 
 <section id="sobre">
-    <h1>Seção 2</h1>
+
 </section>
 
-<section id="incubação">
-    <h1>Seção 3</h1>
+<section id="incubacao">
+
 </section>
 
 <section id="empresas">
     {% for empresa in empresas %}
-    <div class="card">
-        <div class="card-body">
-            <h5 class="card-title"><a href="/empresa/{{empresa.id}}">{{empresa.nome}}</a></h5>
-        </div>
-    </div>
+    <ul>
+        <li><a href="#">{{empresa.nome}}</a></li>
+    </ul>
     {% endfor %}
+
 </section>
 
 <section id="editais">
-    {% for edital in editais %}
-    <div class="card">
-        <div class="card-body">
-            <h5 class="card-title"><a href="/edital/{{edital.id}}">{{edital.titulo}}</a></h5>
-        </div>
-    </div>
-    {% endfor %}
+    <ul>
+        {% for edital in editais %}
+        <li><a href="/edital/{{edital.id}}">{{edital.titulo}}</a></li>
+        {% endfor %}
+    </ul>
 </section>
 
-<section id="contato">
-    <h1>Seção 6</h1>
+<section id="contatos">
+
 </section>
 
 {% endblock %}
