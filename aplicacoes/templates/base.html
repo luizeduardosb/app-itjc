@@ -6,33 +6,59 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% block title %}{% endblock %}</title>
-  <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/0407c4301f.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
 </head>
 
 <body>
-  <div class="cabecalho">
-    <div class="img"><img src="{% static 'img/ifrn-logo.png' %}" alt=""></div>
+  <div class="menu">
+    <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid cabecalho">
+        <img id="ifrn" src="{% static 'img/ifrn-logo.png' %}" alt="IFRN" height="50"
+          class="d-inline-block align-text-top">
+        <div class="infos">
+          <p><i class="fa-solid fa-calendar" style="color: #000000;"></i> SEG - SEX • 7h00 - 22h00 | <i
+              class="fa-solid fa-location-dot" style="color: #000000;"></i> JOÃO CÂMARA, RN - BRASIL</p>
+        </div>
+      </div>
+    </nav>
 
-    <div class="infos">
-        <p><i></i>SEG - SEX • 7h00 - 22h00  |  <i></i>JOÃO CÂMARA, RN - BRASIL</p>
-    </div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img id="itjc" src="{% static 'img/itjc-logo.PNG' %}" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="#sobre">Sobre</a>
+            </li>
+            <li class="nav-item">
+            <li><a href="#incubacao">Incubação</a></li>
+            </li>
+            <li class="nav-item">
+            <li><a href="#empresas">Empresas</a></li>
+            </li>
+            <li class="nav-item">
+            <li><a href="#editais">Editais</a></li>
+            </li>
+            <li class="nav-item">
+            <li><a href="#contatos">Contatos</a></li>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </div>
 
-  <nav>
-    <ul>
-      <li><a href="#inicio">Início</a></li>
-      <li><a href="#sobre">Sobre</a></li>
-      <li><a href="#incubacao">Incubação</a></li>
-      <li><a href="#empresas">Empresas</a></li>
-      <li><a href="#editais">Editais</a></li>
-      <li><a href="#contatos">Contatos</a></li>
-    </ul>
-  </nav>
-
-  {% block content %}
-  {% endblock %}
-
-  copyrigth itjc
+  {% block content %}{% endblock %}
 </body>
 
 </html>
