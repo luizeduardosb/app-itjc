@@ -1,0 +1,160 @@
+/* body */
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #D9D9D9;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.menu {
+    width: 100%;
+    position: fixed;
+}
+
+/* Cabeçalho */
+
+.navbar.bg-body-tertiary {
+    padding: 0;
+}
+
+
+.container-fluid.cabecalho {
+    background-color: #D9D9D9;
+    width: 100%;
+}
+
+#ifrn {
+    margin-left: 5%;
+    width: 7%;
+}
+
+.infos p {
+    margin: 0;
+    font-size: 70%;
+    font-weight: bold;
+}
+
+.infos {
+    width: 50%;
+    margin-right: 5%;
+    text-align: right;
+    float: right;
+}
+
+
+/* Menu principal */
+
+.navbar.navbar-expand-lg.bg-body-tertiary {
+    padding: 0;
+}
+
+.container-fluid {
+    background-color: #12477C;
+}
+
+#itjc {
+    width: 35%;
+}
+
+a.navbar-brand {
+    width: 30%;
+    text-align: right;
+    margin: 0;
+}
+
+ul.nav.justify-content-center {
+    width: 100%;
+}
+
+ul.nav.justify-content-center a {
+    text-transform: uppercase;
+    color: white;
+    font-size: 100%;
+
+}
+
+#navbarNav.collapse.navbar-collapse {
+    align-items: center;
+    width: 60%;
+}
+
+button.navbar-toggler {
+    border: 0;
+}
+
+/* #navbarNav.collapse.navbar-collapse {
+    text-transform: uppercase;
+    background-color: rebeccapurple;
+    width: 70%;
+    padding-left: 10%;
+}
+
+#navbarNav.collapse.navbar-collapse a {
+    text-decoration: none;
+    border: 1px solid black;
+    margin-left: 15% 15%;
+}
+
+.divisoria {
+    width: 5%;
+    height: 50px;
+    border-left: 1px solid white;
+} */
+
+
+/* Seções */
+section {
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-color: #D9D9D9;
+    border-top: 1px solid black;
+    margin-left: 15%;
+    margin-right: 15%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+section h1 {
+    font-size: 70px;
+    color: black;
+}
+
+section#incubacao img {
+    width: 100%;
+}
+
+/* Seção contato */
+section#contato {
+    background-color: #498F34;
+    min-height: 20vh;
+    width: 100%;
+    margin: 0;
+}
+
+.card {
+    background-color: #498F34;
+    width: 20rem;
+    border: 0;
+}
+
+
+/* EditalView */
+
+.editalview {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.editalview p {
+    text-align: justify;
+}
