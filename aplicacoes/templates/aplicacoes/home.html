@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}ITJC{% endblock %}
 
 {% block content %}
@@ -25,11 +26,33 @@
 </section>
 
 <section id="editais">
-    <ul>
+    <div class="container-editais">                 
+        <h2>Editais</h2>
         {% for edital in editais %}
-        <li><a href="/edital/{{edital.id}}">{{edital.titulo}}</a></li>
+        <div class="edital-unitario">
+            <header>
+                <p><b>EDITAL Nº 3/2023 - DG/RJ/RE/IFRN</b></p>
+            </header>
+            <div id="body-edital-unitario">
+                <div>
+                    {% if edital.imagem %}
+                        <img id="imagem-edital" src="{{ edital.imagem.url }}" alt="Edital">
+                    {% else %}
+                        <p>Nenhuma imagem disponível.</p>
+                    {% endif %}
+                </div>
+    
+                <div class="edital-unitario-materia">
+                    <span>{{edital.materia}}</span>
+                    <p>Situação: {{edital.status}}</p>
+                </div>
+            </div>
+            <footer id="rodape-edital-unitario">
+               <a href={{edital.link}}><button class="buttonSaibaMais"><b>SAIBA MAIS >></b></button></a>
+            </footer>
+        </div>
         {% endfor %}
-    </ul>
+    </div>
 </section>
 
 {% endblock %}
