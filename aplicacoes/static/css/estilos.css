@@ -2,6 +2,7 @@
 * {
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 body {
@@ -67,6 +68,7 @@ a.navbar-brand {
     width: 30%;
     text-align: right;
     margin: 0;
+    padding-right: 7%;
 }
 
 ul.nav.justify-content-center {
@@ -121,15 +123,61 @@ section {
 
     display: flex;
     justify-content: center;
-    align-items: center;
 }
-
 
 section h1 {
     font-size: 70px;
     color: black;
 }
 
+/* Background */
+.background img {
+    height: 220px;
+    width: 100%;
+}
+
+/* Seção Início */
+section#inicio-txt {
+    display: flex;
+    min-height: 65vh;
+    /*background-color: rebeccapurple;*/
+
+}
+
+.txt-incubadora {
+    width: 70%;
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 3%;
+    padding-right: 12%;
+    font-weight: bold;
+}
+
+.txt-incubadora h4 {
+    color: #12477C;
+    font-family: 'K2D', sans-serif;
+    font-size: 55px;
+    font-weight: bold;
+}
+
+.destaque {
+    padding-top: 4%;
+    width: 30%;
+}
+
+.card {
+    position: inherit;
+    float: right;
+}
+
+/*.card-body {
+    background-color: #D9D9D9;
+    border-left: 1px solid #7A7A7A;
+    border-right: 1px solid #7A7A7A;
+    border-bottom: 1px solid #7A7A7A;
+}*/
+
+/* Seção Incubação */
 section#incubacao img {
     width: 100%;
 }
@@ -140,9 +188,10 @@ section#contato {
     min-height: 20vh;
     width: 100%;
     margin: 0;
+    border: 0;
 }
 
-.card {
+div.card.contato {
     background-color: #498F34;
     width: 20rem;
     border: 0;
@@ -151,9 +200,10 @@ section#contato {
 #ulContato {
     display: flex;
     gap: 4vw;
+    text-align: justify;
 }
 
-.card-title {
+.card-title.contato {
     color: white;
     font-family: 'K2D', sans-serif;
     font-style: italic;
@@ -168,16 +218,15 @@ section#contato {
     margin-bottom: 2vh;
 }
 
-/* EditalView */
-
-.editalview {
-    margin-left: 15%;
-    margin-right: 15%;
+/* Seção divisoria azul */
+section#divi-azul {
+    background-color: #12477C;
+    min-height: 8vh;
+    width: 100%;
+    margin: 0;
 }
 
-.editalview p {
-    text-align: justify;
-}
+/* Seção Editais */
 
 .container-editais {
     width: 80%;
@@ -221,10 +270,18 @@ section#contato {
     gap: 1vh;
 }
 
+.edital-unitario-materia span {
+    text-align: justify;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
 #rodape-edital-unitario{
     display: flex;
     justify-content: flex-end;
-    margin-top: 2vh;
 }
 
 .buttonSaibaMais {
@@ -241,4 +298,16 @@ section#contato {
     transition: 0.2s;
     border: 1px solid rgb(255, 255, 255, 0.8);
     
+}
+
+
+/* EditalView */
+
+.editalview {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.editalview p {
+    text-align: justify;
 }

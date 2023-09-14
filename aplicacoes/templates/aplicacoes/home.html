@@ -4,7 +4,36 @@
 
 {% block content %}
 
-<section id="inicio">
+<div id="inicio" class="background">
+    <img src="{% static 'img/background.jpg' %}">
+</div>
+
+<section id="inicio-txt">
+        <div class="txt-incubadora">
+            <h4>Incubadora Empresarial</h4>
+            <p>A incubadora de empresas é uma forma de estimular o empreendedorismo. Ela fortalece e prepara as pequenas
+                empresas com o intuito de fazê-las sobreviver no mercado.
+                É um local que abriga esses negócios, oferecendo estrutura capaz de estimular, fornecer e agilizar a
+                transferência de resultados de pesquisa para atividades voltadas à produção.
+                A incubadora de empresas é uma forma de estimular o empreendedorismo. Ela fortalece e prepara as
+                pequenas
+                empresas com o intuito de fazê-las sobreviver no mercado.
+                É um local que abriga esses negócios, oferecendo estrutura capaz de estimular, fornecer e agilizar a
+                transferência de resultados de pesquisa para atividades voltadas à produção.
+            </p>
+        </div>
+
+        <div class="destaque">
+            <div class="card" style="width: 18rem;">
+                <img src="{% static 'img/exemplo.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
 
 </section>
 
@@ -25,30 +54,32 @@
 
 </section>
 
+<section id="divi-azul">
+
+</section>
+
 <section id="editais">
-    <div class="container-editais">                 
+    <div class="container-editais">
         <h2>Editais</h2>
         {% for edital in editais %}
         <div class="edital-unitario">
-            <header>
-                <p><b>EDITAL Nº 3/2023 - DG/RJ/RE/IFRN</b></p>
-            </header>
             <div id="body-edital-unitario">
                 <div>
                     {% if edital.imagem %}
-                        <img id="imagem-edital" src="{{ edital.imagem.url }}" alt="Edital">
+                    <img id="imagem-edital" src="{{ edital.imagem.url }}" alt="Edital">
                     {% else %}
-                        <p>Nenhuma imagem disponível.</p>
+                    <p>Nenhuma imagem disponível.</p>
                     {% endif %}
                 </div>
-    
+
                 <div class="edital-unitario-materia">
+                    <h5><b>{{edital.titulo}}</b></h5>
                     <span>{{edital.materia}}</span>
                     <p>Situação: {{edital.status}}</p>
                 </div>
             </div>
             <footer id="rodape-edital-unitario">
-               <a href={{edital.link}}><button class="buttonSaibaMais"><b>SAIBA MAIS >></b></button></a>
+                <a href="/edital/{{edital.id}}"><button class="buttonSaibaMais"><b>SAIBA MAIS >></b></button></a>
             </footer>
         </div>
         {% endfor %}
