@@ -43,7 +43,7 @@ html {
 }
 
 .infos {
-    width: 50%;
+    width: 70%;
     margin-right: 5%;
     text-align: right;
     float: right;
@@ -89,6 +89,7 @@ ul.nav.justify-content-center a {
 
 button.navbar-toggler {
     border: 0;
+    margin-right: 8%;
 }
 
 /* #navbarNav.collapse.navbar-collapse {
@@ -160,6 +161,10 @@ section#inicio-txt {
     font-weight: bold;
 }
 
+.txt-incubadora p {
+    font-size: 20px;
+}
+
 .destaque {
     padding-top: 4%;
     width: 30%;
@@ -168,6 +173,7 @@ section#inicio-txt {
 .card {
     position: inherit;
     float: right;
+    width: 100%;
 }
 
 /*.card-body {
@@ -188,7 +194,6 @@ section#contato {
     min-height: 20vh;
     width: 100%;
     margin: 0;
-    border: 0;
 }
 
 div.card.contato {
@@ -229,7 +234,7 @@ section#divi-azul {
 /* Seção Editais */
 
 .container-editais {
-    width: 80%;
+    width: 99%;
     max-height: 90vh;
     overflow-y: scroll;
 }
@@ -254,7 +259,7 @@ section#divi-azul {
     margin-top: 3vh;
 }
 
-#body-edital-unitario{
+#body-edital-unitario {
     display: flex;
     align-items: center;
     gap: 1vw;
@@ -279,7 +284,7 @@ section#divi-azul {
     -webkit-box-orient: vertical;
 }
 
-#rodape-edital-unitario{
+#rodape-edital-unitario {
     display: flex;
     justify-content: flex-end;
 }
@@ -293,11 +298,11 @@ section#divi-azul {
     font-size: 1.01vw;
 }
 
-.buttonSaibaMais:hover{
+.buttonSaibaMais:hover {
     background: rgba(0, 0, 0, 0.2);
     transition: 0.2s;
     border: 1px solid rgb(255, 255, 255, 0.8);
-    
+
 }
 
 
@@ -310,4 +315,156 @@ section#divi-azul {
 
 .editalview p {
     text-align: justify;
+}
+
+/* Responsividade */
+
+@media (max-width: 1465px) {
+
+    /* Seção inicio */
+    .txt-incubadora h4 {
+        font-size: 35px;
+    }
+
+    .txt-incubadora p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 991px) {
+
+    /* Cabeçalho */
+    #ifrn {
+        width: 10%;
+        margin-left: 2%;
+    }
+
+    .infos {
+        margin-right: 2%;
+    }
+
+    /* Menu principal */
+
+    a.navbar-brand {
+        width: 30%;
+        margin: 0;
+        text-align: center;
+        padding-right: 0;
+    }
+
+    /* Seções */
+    section {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    /* Seção inicio */
+    .txt-incubadora h4 {
+        font-size: 25px;
+    }
+
+    .txt-incubadora p {
+        font-size: 15px;
+    }
+
+}
+
+@media (max-width: 680px) {
+
+    /* Cabeçalho */
+    #ifrn {
+        width: 12%;
+    }
+
+    .infos p {
+        font-size: 50%;
+    }
+
+    /* Menu principal */
+    #itjc {
+        width: 45%;
+    }
+
+    /* Background */
+    .background img {
+        height: 180px;
+    }
+
+    /* Seção inicio */
+    section#inicio-txt {
+        display: block;
+
+    }
+
+    .txt-incubadora {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .txt-incubadora h4 {
+        font-size: 40px;
+    }
+
+    .txt-incubadora p {
+        font-size: 15px;
+    }
+
+    .destaque {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 544px) {
+
+    /* Menu principal */
+    #itjc {
+        width: 45%;
+    }
+
+    button.navbar-toggler {
+        margin-right: 5%;
+    }
+
+    /* Seção inicio */
+    .txt-incubadora h4 {
+        font-size: 33px;
+    }
+
+}
+
+@media (max-width: 450px) {
+    section {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    /* Cabeçalho */
+    #ifrn {
+        width: 18%;
+        margin-left: 0;
+    }
+
+    div.container-fluid.cabecalho {
+        padding: 0;
+    }
+
+    /* Menu principal */
+    a.navbar-brand {
+        text-align: left;
+    }
+
+    #itjc {
+        width: 60%;
+        margin-left: 10%;
+    }
+
+    button.navbar-toggler {
+        margin-right: 0%;
+    }
+
+        /* Background */
+        .background img {
+            height: 140px;
+        }
 }
