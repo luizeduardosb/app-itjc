@@ -216,10 +216,14 @@ section h1 {
 
 /* Seção Início */
 section#inicio-txt {
-    display: flex;
+    display: block;
     min-height: 65vh;
     /*background-color: rebeccapurple;*/
 
+}
+
+.flex {
+    display: flex;
 }
 
 .txt-incubadora {
@@ -251,6 +255,11 @@ section#inicio-txt {
     position: inherit;
     float: right;
     width: 100%;
+}
+
+.icon-cont {
+    text-align: center;
+    padding-top: 5%;
 }
 
 /*.card-body {
@@ -483,9 +492,8 @@ section#divi-azul {
     }
 
     /* Seção inicio */
-    section#inicio-txt {
+    .flex {
         display: block;
-
     }
 
     .txt-incubadora {
@@ -503,6 +511,12 @@ section#divi-azul {
 
     .destaque {
         width: 100%;
+    }
+
+    .card {
+        float: none;
+        width: 70%;
+        margin-left: 15%;
     }
 
 }
