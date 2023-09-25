@@ -4,7 +4,8 @@ from .models import Empresa
 
 def home(request):
     editais = Edital.objects.all()
-    return render(request, 'aplicacoes/home.html', {'editais': editais})
+    empresas = Empresa.objects.all()
+    return render(request, 'aplicacoes/home.html', {'editais': editais, 'empresas': empresas})
 
 def editais(request):
     editais = Edital.objects.all()
@@ -16,10 +17,12 @@ def editalView(request, id):
 
 def empresas(request):
     empresas = Empresa.objects.all()
+    print(empresas)
     return render(request, 'aplicacoes/empresas.html', {'empresas': empresas})
 
-def empresalView(request, id):
+def empresaView(request, id):
     empresa = get_object_or_404(Empresa, pk=id)
     return render(request, 'aplicacoes/empresa.html', {'empresa': empresa})
+
 
     

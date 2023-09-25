@@ -2,7 +2,7 @@ from django.db import models
 
 class Edital(models.Model):
 
-    STATUS = (('em aberto', 'Em aberto'), ('encerrado', 'Encerrado'),)
+    STATUS = (('em aberto', 'Em aberto'), ('encerrado', 'Encerrado'))
 
     titulo = models.CharField(max_length=150)
     subtitulo = models.CharField(max_length=250)
@@ -29,6 +29,7 @@ class Empresa(models.Model):
     endereco_digital = models.CharField(max_length=100, null=True, blank=True)
     telefone = models.CharField(max_length=50, null=True, blank=True)
     whatsapp = models.CharField(max_length=50, null=True, blank=True)
+    imagem = models.ImageField(upload_to='logoEmpresas', null=True, blank=True, default='default.jpg')
 
     def __str__(self):
         return self.nome
