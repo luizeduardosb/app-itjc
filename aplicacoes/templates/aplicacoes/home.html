@@ -1,55 +1,80 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}
-  ITJC
+ITJC
 {% endblock %}
 
 {% block content %}
-  <div id="inicio" class="background">
-    <img id="img-inicio" src="{% static 'img/background.jpg' %}" />
-  </div>
+<div id="inicio" class="background">
+  <img id="img-inicio" src="{% static 'img/background.jpg' %}" />
+</div>
 
-  <section id="inicio-txt">
-    <div class="flex">
-      <div class="txt-incubadora">
-        <h4>Incubadora Empresarial</h4>
-        <p>A incubadora de empresas é uma forma de estimular o empreendedorismo. Ela fortalece e prepara as pequenas empresas com o intuito de fazê-las sobreviver no mercado. É um local que abriga esses negócios, oferecendo estrutura capaz de estimular, fornecer e agilizar a transferência de resultados de pesquisa para atividades voltadas à produção. A incubadora de empresas é uma forma de estimular o empreendedorismo. Ela fortalece e prepara as pequenas empresas com o intuito de fazê-las sobreviver no mercado. É um local que abriga esses negócios, oferecendo estrutura capaz de estimular, fornecer e agilizar a transferência de resultados de pesquisa para atividades voltadas à produção.</p>
-      </div>
+<section id="inicio-txt">
+  <div class="flex">
+    <div class="txt-incubadora">
+      <h4>Incubadora Empresarial</h4>
+      <p>A incubadora de empresas é uma forma de estimular o empreendedorismo. Ela fortalece e prepara as pequenas
+        empresas com o intuito de fazê-las sobreviver no mercado. É um local que abriga esses negócios, oferecendo
+        estrutura capaz de estimular, fornecer e agilizar a transferência de resultados de pesquisa para atividades
+        voltadas à produção. A incubadora de empresas é uma forma de estimular o empreendedorismo. Ela fortalece e
+        prepara as pequenas empresas com o intuito de fazê-las sobreviver no mercado. É um local que abriga esses
+        negócios, oferecendo estrutura capaz de estimular, fornecer e agilizar a transferência de resultados de pesquisa
+        para atividades voltadas à produção.</p>
+    </div>
 
-      <div class="destaque">
-        <div class="card">
-          <img src="{% static 'img/exemplo.png' %}" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
+    <div class="destaque">
+      <div class="card">
+        <img src="{% static 'img/exemplo.png' %}" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="icon-cont">
-      <i class="fa-solid fa-angles-down fa-lg" style="color: #000000;"></i>
+  <div class="icon-cont">
+    <i class="fa-solid fa-angles-down fa-lg" style="color: #000000;"></i>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="flex">
+    <div class="sobre-txt">
+      <img src="{% static 'img/logo-branco.png' %}" alt="Logo ITJC">
+      <h3>O que é uma incubadora tecnologica?</h3> 
+      
+      <p>Uma incubadora de empresas é uma instituição que fornece suporte e
+      recursos para micro e pequenas empresas em
+      estágio inicial ou em operação. O Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Norte tem
+      duas incubadoras tecnológicas, que ajudam empresas com produtos diferenciados e empreendimentos econômicos
+      solidários. As incubadoras fornecem orientação empresarial, treinamento e assistência técnica.</p>
     </div>
-  </section>
 
-  <section id="sobre"></section>
+    <div class="sobre-img">
+      <img src="{% static 'img/dorival.webp' %}" alt="">
+    </div>
+  </div>
 
-  <section id="incubacao"></section>
+</section>
 
-  <section id="empresas">
-    <header>
-      <h2>Empresas incubadas</h2>
-    </header>
-   <div class="container-empresas">
+<section id="incubacao"></section>
+
+<section id="empresas">
+  <header>
+    <h2>Empresas incubadas</h2>
+  </header>
+  <div class="container-empresas">
     {% for empresa in empresas %}
     <div id="card-empresa" class="card">
       {% if empresa.imagem %}
-        <div class="content-img-empresa">
-          <img id="card-img-top" src="{{ empresa.imagem.url }}" alt="Edital" />
-        </div>
+      <div class="content-img-empresa">
+        <img id="card-img-top" src="{{ empresa.imagem.url }}" alt="Edital" />
+      </div>
       {% else %}
-        <p>Nenhuma imagem disponível.</p>
+      <p>Nenhuma imagem disponível.</p>
       {% endif %}
 
       <hr>
@@ -58,37 +83,37 @@
         <p class="card-text">{{ empresa.descricao }}</p>
       </div>
     </div>
-  {% endfor %}
-   </div>
-  </section>
+    {% endfor %}
+  </div>
+</section>
 
-  <section id="divi-azul"></section>
+<section id="divi-azul"></section>
 
-  <section id="editais">
-    <h2>Editais</h2>
-    <div class="container-editais">
-      {% for edital in editais %}
-        <div class="edital-unitario">
-          <div id="body-edital-unitario">
-            <div>
-              {% if edital.imagem %}
-                <img id="imagem-edital" src="{{ edital.imagem.url }}" alt="Edital" />
-              {% else %}
-                <p>Nenhuma imagem disponível.</p>
-              {% endif %}
-            </div>
-
-            <div class="edital-unitario-materia">
-              <h5><b>{{ edital.titulo }}</b></h5>
-              <span>{{ edital.materia }}</span>
-              <p>Situação: {{ edital.status }}</p>
-            </div>
-          </div>
-          <footer id="rodape-edital-unitario">
-            <a href="/edital/{{ edital.id }}"><button class="buttonSaibaMais"><b>SAIBA MAIS >></b></button></a>
-          </footer>
+<section id="editais">
+  <h2>Editais</h2>
+  <div class="container-editais">
+    {% for edital in editais %}
+    <div class="edital-unitario">
+      <div id="body-edital-unitario">
+        <div>
+          {% if edital.imagem %}
+          <img id="imagem-edital" src="{{ edital.imagem.url }}" alt="Edital" />
+          {% else %}
+          <p>Nenhuma imagem disponível.</p>
+          {% endif %}
         </div>
-      {% endfor %}
+
+        <div class="edital-unitario-materia">
+          <h5><b>{{ edital.titulo }}</b></h5>
+          <span>{{ edital.materia }}</span>
+          <p>Situação: {{ edital.status }}</p>
+        </div>
+      </div>
+      <footer id="rodape-edital-unitario">
+        <a href="/edital/{{ edital.id }}"><button class="buttonSaibaMais"><b>SAIBA MAIS >></b></button></a>
+      </footer>
     </div>
-  </section>
+    {% endfor %}
+  </div>
+</section>
 {% endblock %}

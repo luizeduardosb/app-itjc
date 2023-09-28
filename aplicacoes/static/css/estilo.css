@@ -223,7 +223,7 @@ section h1 {
 
 /* Background */
 .background img {
-    height: 220px;
+    height: 200px;
     width: 100%;
 }
 
@@ -232,7 +232,6 @@ section h1 {
 section#inicio-txt {
     display: block;
     min-height: 65vh;
-    /*background-color: rebeccapurple;*/
 
 }
 
@@ -273,7 +272,6 @@ section#inicio-txt {
 
 .icon-cont {
     text-align: center;
-    padding-top: 5%;
 }
 
 /*.card-body {
@@ -282,6 +280,46 @@ section#inicio-txt {
     border-right: 1px solid #7A7A7A;
     border-bottom: 1px solid #7A7A7A;
 }*/
+
+/* Seção Sobre */
+section#sobre {
+    display: block;
+    margin-top: 7%;
+    border: 1px solid black;
+}
+
+.sobre-txt {
+    width: 50%;
+    padding-right: 3%;
+    text-align: justify;
+}
+
+.sobre-txt h3 {
+    padding-top: 5%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.sobre-txt p {
+    font-size: 20px;
+    color: #3C3C3C;
+    font-weight: bold;
+}
+
+.sobre-txt img {
+    width: 10%;
+}
+
+.sobre-img {
+    width: 50%;
+    text-align: right;
+}
+
+.sobre-img img {
+    width: 80%;
+    border-radius: 20%;
+}
+
 
 /* Seção Incubação */
 section#incubacao img {
