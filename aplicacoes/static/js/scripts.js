@@ -1,11 +1,23 @@
-function f() {
-    document.getElementsByClassName('dropdown')[0].classList.toggle('down');
-    document.getElementsByClassName('arrow')[0].classList.toggle('gone');
-    if (document.getElementsByClassName('dropdown')[0].classList.contains('down')) {
-      setTimeout(function() {
-        document.getElementsByClassName('dropdown')[0].style.overflow = 'visible'
-      }, 500)
-    } else {
-      document.getElementsByClassName('dropdown')[0].style.overflow = 'hidden'
-    }
-  }
+function openMenu() {
+  var dropdown = document.querySelector('.dropdown');
+  dropdown.classList.toggle('open'); // qnd a função é chamada a classe é adicionada 
+}
+
+var menuIcon = document.querySelector('.drop');
+menuIcon.addEventListener('click', openMenu); // monitoramento do botão .drop
+
+
+document.addEventListener('click', function (event) {
+  var dropdown = document.querySelector('.dropdown');
+  var menuIcon = document.querySelector('.drop');
+
+  if (!dropdown.contains(event.target) && !menuIcon.contains(event.target)) {
+    openMenu();
+  }// monitorando algum click fora do menu para fechar ele
+
+  if (event.target.tagName === 'P' && dropdown.contains(event.target)) {
+    openMenu();
+  }// monitorando algum click em uma tag p
+}); 
+
+

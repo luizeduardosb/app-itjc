@@ -91,9 +91,6 @@ button.navbar-toggler {
     margin-right: 8%;
 }
 
-.drop {
-    margin-right: 5%;
-}
 
 .title {
     width: 100%;
@@ -111,21 +108,29 @@ span {
     font-size: 18px !important
 }
 
+/* MENU LATERAL */
+.drop {
+    margin-right: 5%;
+}
+
 .dropdown {
-    right: -250px;
-    background-color: rgba(18, 71, 124, 0.9)!important;
+    background-color: rgba(18, 71, 124, 0.9);
     border-radius: 4px;
     box-shadow: 0 0 40px -10px #000;
     color: #505050;
-    margin-top: 24px;
-    max-height: 0;
+    width: 80%;
     height: 100vh;
-    overflow: hidden;
-    transition: right 0.3s ease;
-
+    transform: translateX(350px);
+    transition: transform 0.3s ease;
+    
     display: flex;
     flex-direction: column;
     gap: 1.5vh;
+    float: right;
+}
+
+.open {
+    transform: translateX(0);
 }
 
 .dropdown p {
@@ -138,41 +143,18 @@ span {
     transition: all .1s
 }
 
+.dropdown p:hover {
+    background: #498F34;
+    z-index: 1000;
+    color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 30px -10px #000
+}
+
 .dropdown a {
     text-decoration: none;
 }
 
-.down {
-    max-height: 100vh;
-    right: 0!important;
-}
 
-.dropdown.down {
-    width: 80%;
-    float: right;
-    margin: 0;
-}
-
-.arrow {
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 10px solid #fff;
-    position: absolute;
-    right: 20px;
-    bottom: -24px;
-    display: none
-}
-
-.arrow.gone {
-    display: block
-}
-
-.dropdown p:hover {
-    background: #498F34;
-    -webkit-transform: scale(1.05);
-    color: rgba(255, 255, 255, 0.8);
-    box-shadow: 0 0 30px -10px #000
-}
 
 /* #navbarNav.collapse.navbar-collapse {
     text-transform: uppercase;
@@ -389,9 +371,9 @@ section#divi-azul {
 
 /* Seção Editais */
 
-section#editais{
+section#editais {
     display: flex;
-    flex-direction: column!important;
+    flex-direction: column !important;
 }
 
 section#editais h2 {
@@ -471,9 +453,9 @@ section#editais h2 {
     border: 1px solid rgb(255, 255, 255, 0.8);
 }
 
-.button-edital{
+.button-edital {
     padding: 0.8% 3% 0.8% 3%;
-    font-family: 'Poppins'!important;
+    font-family: 'Poppins' !important;
     background: rgba(0, 0, 0, 0.4);
     border: 0;
     border-radius: 0.45vw;
@@ -501,31 +483,31 @@ section#editais h2 {
 
 /* Section Empresa */
 
-section#empresas{
+section#empresas {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10vh;
 }
 
-section#empresas header h2{
+section#empresas header h2 {
     font-family: "K2D", sans-serif;
 }
 
-.container-empresas{
+.container-empresas {
     width: 70vw;
     max-height: 90vh;
     overflow-y: scroll;
     display: flex;
-    flex-wrap: wrap!important;
+    flex-wrap: wrap !important;
     gap: 2vw;
 }
 
-.container-empresas::-webkit-scrollbar{
+.container-empresas::-webkit-scrollbar {
     width: 0px;
 }
 
-#card-empresa{
+#card-empresa {
     width: 20vw;
     border: 1px solid gray;
     border-radius: 0.3rem;
@@ -533,7 +515,7 @@ section#empresas header h2{
 
 }
 
-.content-img-empresa{
+.content-img-empresa {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -541,7 +523,7 @@ section#empresas header h2{
     padding-bottom: 1.5vh;
 }
 
-section#empresas img{
+section#empresas img {
     width: 12vw;
 }
 
@@ -721,14 +703,15 @@ section#empresas img{
         font-size: 33px;
     }
 
-        /* Seção Sobre */
-        .sobre-txt h3 {
-            font-size: 25px;
-        }
+    /* Seção Sobre */
+    .sobre-txt h3 {
+        font-size: 25px;
+    }
 
 }
 
 @media (max-width: 450px) {
+
     /* Cabeçalho */
     #ifrn {
         width: 18%;
@@ -761,6 +744,6 @@ section#empresas img{
     /* Seção Sobre */
     .sobre-txt h3 {
         font-size: 20px;
-        }
+    }
 
 }
