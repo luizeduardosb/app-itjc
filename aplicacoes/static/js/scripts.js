@@ -1,6 +1,9 @@
 function openMenu() {
   var dropdown = document.querySelector('.dropdown');
   dropdown.classList.toggle('open'); // qnd a função é chamada a classe é adicionada 
+  if (dropdown.classList.contains('open')) {
+    dropdown.style.height = '100vh';
+}
 }
 
 document.addEventListener('click', function (event) {
