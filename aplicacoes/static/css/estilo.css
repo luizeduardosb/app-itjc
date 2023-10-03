@@ -1,5 +1,6 @@
 /* body */
 * {
+    margin: 0;
     padding: 0;
 }
 
@@ -7,6 +8,7 @@ body {
     width: 100vw;
     background-color: #D9D9D9;
     font-family: 'K2D', sans-serif;
+    overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -15,8 +17,11 @@ body::-webkit-scrollbar {
 
 .menu {
     width: 100%;
-    position: fixed;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
+
 
 /* Cabeçalho */
 
@@ -120,10 +125,10 @@ span {
     color: #505050;
     width: 80%;
     height: 100vh;
-    transform: translateX(1050px);
-    transition: transform 0.3s ease;
+    transform: translateX(3050px);
+    transition: transform 0.4s ease;
     overflow: hidden;
-    
+
     display: flex;
     flex-direction: column;
     gap: 1.5vh;
@@ -200,6 +205,10 @@ section h1 {
 }
 
 /* Background */
+.background{
+    background-color: red;
+}
+
 .background img {
     height: 200px;
     width: 100%;
@@ -209,6 +218,7 @@ section h1 {
 
 section#inicio-txt {
     display: block;
+    margin-top: 0;
     min-height: 65vh;
 
 }
@@ -374,7 +384,9 @@ section#divi-azul {
 
 section#editais {
     display: flex;
-    flex-direction: column !important;
+    flex-direction: column;
+    z-index: 1;
+    position: relative!important;
 }
 
 section#editais h2 {
