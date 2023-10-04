@@ -14,6 +14,18 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #adadad;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: #636363;
+}
+
+
 .menu {
     width: 100%;
     position: sticky;
@@ -126,7 +138,7 @@ span {
     height: 100vh;
     position: fixed;
     overflow: hidden;
-    transform: translateX(1050px);
+    transform: translateX(2050px);
     transition: transform 0.4s ease;
     z-index: 1000;
 
@@ -206,13 +218,25 @@ section h1 {
 }
 
 /* Background */
-.background{
-    background-color: red;
+
+#inicio img {
+    height: 150px;
+    width: 100%;
+    position: relative;
 }
 
-.background img {
-    height: 200px;
-    width: 100%;
+#inicio p {
+    position: absolute;
+    margin-top: -120px;
+    margin-left: 15%;
+    background-color: #12477C;
+    text-transform: uppercase;
+    color: #D9D9D9;
+    padding: 10px 20px;
+    font-size: 25px;
+    opacity: 0.9;
+    font-family: 'K2D', sans-serif;
+    letter-spacing: 2px; 
 }
 
 /* Seção Início */
@@ -241,7 +265,7 @@ section#inicio-txt {
 .txt-incubadora h4 {
     color: #12477C;
     font-family: 'K2D', sans-serif;
-    font-size: 47px;
+    font-size: 45px;
     font-weight: bold;
     letter-spacing: 2px;
 }
@@ -313,7 +337,7 @@ section#sobre {
 }
 
 .sobre-img img {
-    width: 100%;
+    width: 90%;
     border-radius: 10%;
 }
 
@@ -332,53 +356,58 @@ section#incubacao img {
     width: 100%;
 }
 
-/* Seção contato */
-section#contato {
-    background-color: #498F34;
-    min-height: 20vh;
-    width: 100vw;
-    margin: 0;
-}
+/* Section Empresa */
 
-div.card.contato {
-    background: transparent;
-    width: 20rem;
-    border: 0;
-}
-
-#ulContato {
-    width: 100%;
+section#empresas {
     display: flex;
-    gap: 4vw;
-    text-align: justify;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vh;
 }
 
-.card-text {
-    line-height: 1.2;
+section#empresas header h2 {
+    font-family: "K2D", sans-serif;
 }
 
-.card-title.contato {
-    color: white;
-    font-family: 'K2D', sans-serif;
-    font-style: italic;
-    font-weight: 700;
-    font-size: 1.4vw !important;
+.container-empresas {
+    width: 70vw;
+    max-height: 90vh;
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap !important;
+    gap: 2vw;
 }
 
-.card-body-son {
+#card-empresa {
+    width: 21vw;
+    border: 1px solid gray;
+    border-radius: 0.3rem;
+    background: transparent;
+
+}
+
+.content-img-empresa {
     display: flex;
     align-items: center;
-    gap: 0.5vw;
-    margin-bottom: 2vh;
+    justify-content: center;
+    padding-top: 1.5vh;
 }
 
-/* Seção divisoria azul */
-section#divi-azul {
+#card-img-top {
+    width: 15vw;
+    height: 12vw;
+
+}
+
+/* Seção email */
+
+section#email {
     background-color: #12477C;
-    min-height: 8vh;
-    width: 100vw;
     margin: 0;
-    margin-top: 5vh;
+    min-height: 30vh;
+}
+
+.dados {
 }
 
 /* Seção Editais */
@@ -387,23 +416,19 @@ section#editais {
     display: flex;
     flex-direction: column;
     z-index: 1;
-    position: relative!important;
+    margin-bottom: -15px;
 }
 
 section#editais h2 {
     font-family: "K2D", sans-serif;
     font-weight: 600;
+    margin-bottom: 0
 }
 
 .container-editais {
     width: 99%;
     max-height: 90vh;
-    overflow-y: scroll;
-}
-
-
-.container-editais::-webkit-scrollbar {
-    width: 0px;
+    overflow-y: auto;
 }
 
 .edital-unitario {
@@ -412,14 +437,12 @@ section#editais h2 {
     padding: 1rem;
     box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
     gap: 1vw;
+    margin-top: 3vh;
+    margin-right: 3vh;
 }
 
 .edital-unitario div p {
     font-size: 1vw;
-}
-
-.edital-unitario.edital-unitario {
-    margin-top: 3vh;
 }
 
 #body-edital-unitario {
@@ -482,7 +505,6 @@ section#editais h2 {
     border: 1px solid rgb(255, 255, 255, 0.8);
 }
 
-
 /* EditalView */
 
 .editalview {
@@ -495,53 +517,53 @@ section#editais h2 {
     text-align: justify;
 }
 
-/* Section Empresa */
-
-section#empresas {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10vh;
+/* Seção contato */
+section#contato {
+    background-color: #498F34;
+    min-height: 40vh;
+    width: 100vw;
+    margin: 0;
 }
 
-section#empresas header h2 {
-    font-family: "K2D", sans-serif;
-}
-
-.container-empresas {
-    width: 70vw;
-    max-height: 90vh;
-    overflow-y: scroll;
-    display: flex;
-    flex-wrap: wrap !important;
-    gap: 2vw;
-}
-
-.container-empresas::-webkit-scrollbar {
-    width: 0px;
-}
-
-#card-empresa {
-    width: 20vw;
-    border: 1px solid gray;
-    border-radius: 0.3rem;
+div.card.contato {
     background: transparent;
-
+    width: 20rem;
+    border: 0;
 }
 
-.content-img-empresa {
+#ulContato {
+    width: 100%;
+    display: flex;
+    gap: 4vw;
+    text-align: justify;
+}
+
+.card-text {
+    line-height: 1.2;
+}
+
+.card-title.contato {
+    color: white;
+    font-family: 'K2D', sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 1.4vw !important;
+}
+
+.card-body-son {
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding-top: 1.5vh;
-    padding-bottom: 1.5vh;
+    gap: 0.5vw;
+    margin-bottom: 2vh;
 }
 
-section#empresas img {
-    width: 12vw;
+/* Direitos autorais */
+
+section#autoral {
+    margin: 0;
+    background-color: #D9D9D9;
+    min-height: 3vh;
 }
-
-
 
 
 /* Responsividade */
@@ -556,11 +578,11 @@ section#empresas img {
 
     /* Seção inicio */
     .txt-incubadora h4 {
-        font-size: 35px;
+        font-size: 30px;
     }
 
     .txt-incubadora p {
-        font-size: 15px;
+        font-size: 20px;
     }
 
     /* Seção Sobre */
@@ -589,6 +611,16 @@ section#empresas img {
         text-align: center;
         padding-right: 0;
     }
+    /* Background */
+    #inicio img {
+        height: 100px;
+    }
+
+    #inicio p {
+        margin-top: -80px;
+        font-size: 15px;
+        margin-left: 10%;
+    }
 
     /* Seções */
     section {
@@ -598,7 +630,7 @@ section#empresas img {
 
     /* Seção inicio */
     .txt-incubadora h4 {
-        font-size: 25px;
+        font-size: 22px;
     }
 
     .txt-incubadora p {

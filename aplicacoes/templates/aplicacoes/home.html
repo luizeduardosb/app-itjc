@@ -5,8 +5,9 @@ ITJC
 {% endblock %}
 
 {% block content %}
-<div id="inicio" class="background">
-  <img id="img-inicio" src="{% static 'img/background.jpg' %}" />
+<div id="inicio">
+  <img src="{% static 'img/background.jpg' %}" />
+  <p>Há 10 anos transformando <br> o futuro da sua empresa</p>
 </div>
 
 <section id="inicio-txt">
@@ -52,7 +53,7 @@ ITJC
     </div>
 
     <div class="sobre-img">
-      <img src="{% static 'img/dorival.webp' %}" alt="">
+      <img src="{% static 'img/fachada.jpeg' %}" alt="">
     </div>
   </div>
   <div class="sobre-rodape">
@@ -66,7 +67,10 @@ ITJC
 
 </section>
 
-<section id="incubacao"></section>
+<section id="incubacao">
+
+  
+</section>
 
 <section id="empresas">
   <header>
@@ -84,7 +88,8 @@ ITJC
       {% endif %}
 
       <hr>
-      <div class="card-body">
+
+      <div class="card-body empresa">
         <h5 class="card-title"><b>{{ empresa.nome }}</b></h5>
         <p class="card-text">{{ empresa.descricao }}</p>
       </div>
@@ -93,7 +98,18 @@ ITJC
   </div>
 </section>
 
-<section id="divi-azul"></section>
+<section id="email">
+  <div class="dados">
+    Nome: <input type="text" name="" id="" placeholder="Como podemos te chamar?">
+    E-mail: <input type="email" name="" id="" placeholder="Digite seu e-mail">
+    <button>Cadastrar-se</button>
+  </div>
+
+  <div class="txt-email">
+    <p>Deseja ficar por dentro de tudo o que rola na ITJC?</p>
+    <p>Cadastre-se e seja o primeiro a receber os novos editais da incubadora</p>
+  </div>
+</section>
 
 <section id="editais">
   <h2>Editais</h2>
