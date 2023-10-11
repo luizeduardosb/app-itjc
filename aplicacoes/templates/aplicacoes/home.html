@@ -41,73 +41,70 @@ ITJC
 </section>
 
 <section id="sobre">
-  <div class="flex sobre">
-    <div class="sobre-txt">
-      <img src="{% static 'img/logo-branco.png' %}" alt="Logo ITJC">
-      <h3>O que é uma incubadora tecnologica?</h3>
-      <p>Uma incubadora de empresas é uma instituição que fornece suporte e
-        recursos para micro e pequenas empresas em
-        estágio inicial ou em operação. O Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Norte tem
-        duas incubadoras tecnológicas, que ajudam empresas com produtos diferenciados e empreendimentos econômicos
-        solidários. As incubadoras fornecem orientação empresarial, treinamento e assistência técnica.</p>
-    </div>
-
-    <div class="sobre-img">
-      <img src="{% static 'img/fachada.jpeg' %}" alt="">
-    </div>
-  </div>
-  <div class="sobre-rodape">
-    <div class="icon-lampada">
-      <img width="30" height="30" src="https://img.icons8.com/ios/100/40C057/light-on--v1.png" alt="light-on--v1" />
-    </div>
-    <div class="icon-cont sobre">
-      <i class="fa-solid fa-angles-down fa-lg" style="color: #000000;"></i>
-    </div>
+  <div class="sobre">
+    <h3>Sobre a incubadora tecnológica</h3>
+    <p>Uma incubadora de empresas é uma instituição que fornece suporte e
+      recursos para micro e pequenas empresas em
+      estágio inicial ou em operação. O Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Norte tem
+      duas incubadoras tecnológicas, que ajudam empresas com produtos diferenciados e empreendimentos econômicos
+      solidários. As incubadoras fornecem orientação empresarial, treinamento e assistência técnica.</p>
+    <button>REVISTA ITJC</button>
   </div>
 
 </section>
 
 <section id="incubacao">
 
-  
+
 </section>
 
 <section id="empresas">
-  <header>
-    <h2>Empresas incubadas</h2>
-  </header>
-  <div class="container-empresas">
-    {% for empresa in empresas %}
-    <div id="card-empresa" class="card">
-      {% if empresa.imagem %}
-      <div class="content-img-empresa">
-        <img id="card-img-top" src="{{ empresa.imagem.url }}" alt="Edital" />
-      </div>
-      {% else %}
-      <p>Nenhuma imagem disponível.</p>
-      {% endif %}
+  <div class="empresas">
+    <header>
+      <h2>Empresas incubadas</h2>
+    </header>
+    <div class="container-empresas">
+      {% for empresa in empresas %}
+      <div id="card-empresa" class="card">
+        {% if empresa.imagem %}
+        <div class="content-img-empresa">
+          <img id="card-img-top" src="{{ empresa.imagem.url }}" alt="Edital" />
+        </div>
+        {% else %}
+        <p>Nenhuma imagem disponível.</p>
+        {% endif %}
 
-      <hr>
+        <hr>
 
-      <div class="card-body empresa">
-        <h5 class="card-title"><b>{{ empresa.nome }}</b></h5>
-        <p class="card-text">{{ empresa.descricao }}</p>
+        <div class="card-body empresa">
+          <h5 class="card-title"><b>{{ empresa.nome }}</b></h5>
+          <p class="card-text">{{ empresa.descricao }}</p>
+        </div>
       </div>
+      {% endfor %}
     </div>
-    {% endfor %}
   </div>
 </section>
 
 <section id="email">
   <div class="dados">
-    Nome: <input type="text" name="" id="" placeholder="Como podemos te chamar?">
-    E-mail: <input type="email" name="" id="" placeholder="Digite seu e-mail">
-    <button>Cadastrar-se</button>
+    <div id="nome">
+      <label for="">Nome</label> <br>
+      <input required type="text" name="" id="" placeholder="como podemos te chamar?">
+    </div>
+    <br>
+    <div id="email">
+      <label for="">E-mail</label> <br>
+      <input required type="email" name="" id="" placeholder="seuemail@email.com">
+    </div>
+    <br>
+    <button>Enviar</button>
   </div>
 
   <div class="txt-email">
-    <p>Deseja ficar por dentro de tudo o que rola na ITJC?</p>
-    <p>Cadastre-se e seja o primeiro a receber os novos editais da incubadora</p>
+    <h2>Cadastre-se</h2>
+    <p>Cadastre-se e seja o primeiro a receber noticias, informações e novos editais da incubadora</p>
+    <img src="{% static 'img/logo-transparente.png' %}" alt="">
   </div>
 </section>
 
