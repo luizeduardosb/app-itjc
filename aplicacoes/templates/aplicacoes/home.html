@@ -6,7 +6,7 @@ ITJC
 
 {% block content %}
 <div id="inicio">
-  <img src="{% static 'img/background.jpg' %}" />
+  <img src="{% static 'img/background.PNG' %}" />
   <p>Há 10 anos transformando <br> o futuro da sua empresa</p>
 </div>
 
@@ -22,21 +22,18 @@ ITJC
         voltadas à produção.</p>
     </div>
 
-    <div class="destaque">
-      <div class="card">
-        <img src="{% static 'img/exemplo.png' %}" class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+    <div class="destaque inicio">
+      <div class="card inicio">
+        <img src="{% static 'img/exemplo.png' %}" class="card-img-top inicio" alt="..." />
+        <div class="card-body inicio">
+          <h5 class="card-title inicio">Card title</h5>
+          <p class="card-text inicio">Some quick example text to build on the card title and make up the bulk of the
+            card's
             content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <a href="#" class="btn btn-primary inicio">Go somewhere</a>
         </div>
       </div>
     </div>
-  </div>
-
-  <div class="icon-cont inicio">
-    <i class="fa-solid fa-angles-down fa-lg" style="color: #000000;"></i>
   </div>
 </section>
 
@@ -45,9 +42,7 @@ ITJC
     <h3>Sobre a incubadora tecnológica</h3>
     <p>Uma incubadora de empresas é uma instituição que fornece suporte e
       recursos para micro e pequenas empresas em
-      estágio inicial ou em operação. O Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Norte tem
-      duas incubadoras tecnológicas, que ajudam empresas com produtos diferenciados e empreendimentos econômicos
-      solidários. As incubadoras fornecem orientação empresarial, treinamento e assistência técnica.</p>
+      estágio inicial ou em operação.</p>
     <button>REVISTA ITJC</button>
   </div>
 
@@ -55,6 +50,10 @@ ITJC
 
 <section id="incubacao">
 
+
+</section>
+
+<section id="divi">
 
 </section>
 
@@ -109,30 +108,32 @@ ITJC
 </section>
 
 <section id="editais">
-  <h2>Editais</h2>
-  <div class="container-editais">
-    {% for edital in editais %}
-    <div class="edital-unitario">
-      <div id="body-edital-unitario">
-        <div>
-          {% if edital.imagem %}
-          <img id="imagem-edital" src="{{ edital.imagem.url }}" alt="Edital" />
-          {% else %}
-          <p>Nenhuma imagem disponível.</p>
-          {% endif %}
-        </div>
+  <div class="editais">
+    <h2>Editais</h2>
+    <div class="container-editais">
+      {% for edital in editais %}
+      <div class="edital-unitario">
+        <div id="body-edital-unitario">
+          <div>
+            {% if edital.imagem %}
+            <img id="imagem-edital" src="{{ edital.imagem.url }}" alt="Edital" />
+            {% else %}
+            <p>Nenhuma imagem disponível.</p>
+            {% endif %}
+          </div>
 
-        <div class="edital-unitario-materia">
-          <h5><b>{{ edital.titulo }}</b></h5>
-          <span>{{ edital.materia }}</span>
-          <p>Situação: {{ edital.status }}</p>
+          <div class="edital-unitario-materia">
+            <h5><b>{{ edital.titulo }}</b></h5>
+            <span>{{ edital.materia }}</span>
+            <p>Situação: {{ edital.status }}</p>
+          </div>
         </div>
+        <footer id="rodape-edital-unitario">
+          <a href="/edital/{{ edital.id }}"><button class="buttonSaibaMais"><b>SAIBA MAIS >></b></button></a>
+        </footer>
       </div>
-      <footer id="rodape-edital-unitario">
-        <a href="/edital/{{ edital.id }}"><button class="buttonSaibaMais"><b>SAIBA MAIS >></b></button></a>
-      </footer>
+      {% endfor %}
     </div>
-    {% endfor %}
   </div>
 </section>
 {% endblock %}
