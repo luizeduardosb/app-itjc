@@ -234,7 +234,7 @@ section h1 {
     color: #D9D9D9;
     padding: 10px 20px;
     font-size: 25px;
-    letter-spacing: 2px; 
+    letter-spacing: 2px;
 }
 
 /* Seção Início */
@@ -339,7 +339,7 @@ section#sobre {
     background-color: #12477C;
     border-radius: 5vh;
     border: 0;
-    width: 30%;
+    width: 35vh;
     height: 7vh;
     font-size: 20px;
     font-weight: bold;
@@ -380,7 +380,7 @@ section#empresas {
 }
 
 section#empresas header h2 {
-    font-family:'K2D';
+    font-family: 'K2D';
     font-weight: bold;
     font-size: 40px;
     margin-bottom: 3%;
@@ -459,7 +459,8 @@ section#email {
 
 .dados ::placeholder {
     color: #636363;
-    font-size: 15px;
+    font-size: 12px;
+    text-transform: uppercase;
 }
 
 .dados label {
@@ -497,7 +498,7 @@ section#email {
     height: 5vh;
     background-color: #12477C;
     font-weight: bold;
-    border: 3px solid #D9D9D9;
+    border: 2px solid #D9D9D9;
     color: #D9D9D9;
 }
 
@@ -693,12 +694,18 @@ section#autoral {
     .sobre-txt h3 {
         font-size: 23px;
     }
+
+    /* Seção email*/
+    section#email {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
 }
 
 @media (max-width: 1045px) {
 
     /* Seção contatos */
-    
+
     .card-title.contato {
         font-size: 15px;
     }
@@ -706,6 +713,37 @@ section#autoral {
     #ulContato {
         display: block;
         margin-left: 28%;
+    }
+
+    /* Seção email*/
+    section#email {
+        padding-left: 15%;
+        padding-right: 15%;
+        min-height: 45vh;
+    }
+
+    .txt-email h2 {
+        font-size: 35px;
+    }
+
+    .txt-email p {
+        font-size: 16px;
+    }
+
+    .txt-email img {
+        width: 80px;
+    }
+
+    .dados button {
+        width: 17vh;
+    }
+
+    .dados input { 
+        width: 35vh;
+    }
+
+    .dados label {
+        font-size: 15px;
     }
 }
 
@@ -729,6 +767,7 @@ section#autoral {
         text-align: center;
         padding-right: 0;
     }
+
     /* Background */
     #inicio img {
         height: 100px;
@@ -756,34 +795,41 @@ section#autoral {
     }
 
     /* Seção Sobre */
-    .sobre-img {
-        padding: 0;
-        width: 100%;
-        display: block;
+
+    section#sobre {
+        min-height: 40vh;
     }
 
-    .sobre-img img {
-        width: 70%;
+    .sobre {
+        margin: 0 5%;
     }
 
-    .sobre-txt {
-        padding: 0;
-        width: 100%;
+    .sobre h3 {
+        font-size: 22px;
     }
 
-    .sobre-txt h3 {
-        text-align: left;
-        font-size: 35px;
+    .sobre p {
+        font-size: 15px;
     }
 
-    .flex.sobre {
-        display: block;
-        text-align: center;
+    /* Seção Empresas*/
+    #card-empresa {
+        width: 32vw;
     }
 
+    /* Seção email*/
+    section#email {
+        padding-left: 5%;
+        padding-right: 5%;
+        min-height: 35vh;
+    }
 }
 
 @media (max-width: 680px) {
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
 
     /* Cabeçalho */
     #ifrn {
@@ -850,14 +896,69 @@ section#autoral {
     }
 
     /* Seção Sobre */
-    .sobre-txt h3 {
+    section#sobre {
+        margin-top: 8%;
+    }
+
+    .sobre button {
+        width: 28vh;
+        font-size: 18px;
+    }
+
+    /* Seção Empresas */
+
+    section#empresas header h2 {
         font-size: 30px;
     }
 
-    .sobre-txt p {
-        font-size: 15px;
+    #card-empresa {
+        width: 95%;
     }
 
+        /* Seção email*/
+        section#email {
+            display: flex;
+            min-height: 70vh;
+            flex-direction: column;
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+
+        .dados {
+            padding-top: 8%;
+            width: 100%;
+            order: 2;
+        }
+
+        .txt-email {
+            width: 100%;
+            order: 1;
+        }
+    
+        .txt-email h2 {
+            font-size: 35px;
+            margin-bottom: 0;
+        }
+    
+        .txt-email p {
+            font-size: 16px;
+        }
+    
+        .txt-email img {
+            display: none;
+        }
+    
+        .dados button {
+            width: 22vh;
+        }
+    
+        .dados input { 
+            width: 100%;
+        }
+    
+        .dados label {
+            font-size: 15px;
+        }
 }
 
 @media (max-width: 544px) {
@@ -873,7 +974,7 @@ section#autoral {
 
     /* Seção inicio */
     .txt-incubadora h4 {
-        font-size: 33px;
+        font-size: 27px;
     }
 
     /* Seção Sobre */
@@ -885,6 +986,11 @@ section#autoral {
 
     #ulContato {
         margin-left: 22%;
+    }
+
+    /* Seção Empresas*/
+    section#empresas header h2 {
+        font-size: 25px;
     }
 
 }
@@ -921,13 +1027,19 @@ section#autoral {
     }
 
     /* Seção Sobre */
-    .sobre-txt h3 {
+    section#sobre {
+        min-height: 45vh;
+    }
+
+    /* Seção Empresas*/
+
+    section#empresas header h2 {
         font-size: 20px;
     }
 
-        /* Seção contatos */
+    /* Seção contatos */
 
-        #ulContato {
-            margin-left: 18%;
-        }
+    #ulContato {
+        margin-left: 0;
+    }
 }
