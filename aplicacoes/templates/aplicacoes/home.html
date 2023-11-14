@@ -118,14 +118,14 @@ ITJC
             {% if edital.imagem %}
             <img id="imagem-edital" src="{{ edital.imagem.url }}" alt="Edital" />
             {% else %}
-            <p>Nenhuma imagem disponível.</p>
+            <p>Nenhuma imagem disponível</p>
             {% endif %}
           </div>
 
           <div class="edital-unitario-materia">
             <h5><b>{{ edital.titulo }}</b></h5>
             <span>{{ edital.materia }}</span>
-            <p>Situação: {{ edital.status }}</p>
+            <p>Situação: <b>{{ edital.status }}</b></p>
           </div>
         </div>
         <footer id="rodape-edital-unitario">

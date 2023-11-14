@@ -546,7 +546,7 @@ section#editais h2 {
 }
 
 .edital-unitario div p {
-    font-size: 1vw;
+    font-size: 18px;
 }
 
 #body-edital-unitario {
@@ -610,16 +610,36 @@ section#editais h2 {
 }
 
 /* EditalView */
-
 .editalview {
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-bottom: 10%;
+    margin: 7vh 15%;
+}
+
+.editalview h2 {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
 }
 
 .editalview p {
     text-align: justify;
+    margin-top: 5vh;
+    font-size: 18px;
 }
+
+.edital_top {
+    display: flex;
+}
+
+.edital_img img {
+    width: 45vh;
+    margin-left: 5vh;
+}
+
+button.button-edital.view {
+    font-size: 2.5vh;
+
+}
+
 
 /* Seção contato */
 section#contato {
@@ -700,6 +720,20 @@ section#autoral {
         padding-left: 15%;
         padding-right: 15%;
     }
+
+    /* EditalView */
+
+    .editalview h2 {
+        font-size: 25px;
+    }
+
+    .editalview h3 {
+        font-size: 22px;
+    }
+
+    .editalview h5 {
+        font-size: 18px;
+    }
 }
 
 @media (max-width: 1045px) {
@@ -738,12 +772,25 @@ section#autoral {
         width: 17vh;
     }
 
-    .dados input { 
+    .dados input {
         width: 35vh;
     }
 
     .dados label {
         font-size: 15px;
+    }
+
+    /* EditalView */
+    .editalview {
+        margin: 7vh 10%;
+    }
+
+    .editalview h2 {
+        font-size: 25px;
+    }
+
+    .editalview h3 {
+        font-size: 3vh;
     }
 }
 
@@ -822,6 +869,29 @@ section#autoral {
         padding-left: 5%;
         padding-right: 5%;
         min-height: 35vh;
+    }
+
+    /* EditalView */
+    .editalview {
+        margin: 6vh 10%;
+    }
+
+    .editalview h2 {
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .edital_top {
+        display: block;
+    }
+
+    .edital_img {
+        margin: 5vh 19%;
+    }
+
+    .edital_img img {
+        margin: 0;
+        width: 100%;
     }
 }
 
@@ -915,50 +985,68 @@ section#autoral {
         width: 95%;
     }
 
-        /* Seção email*/
-        section#email {
-            display: flex;
-            min-height: 70vh;
-            flex-direction: column;
-            padding-left: 10%;
-            padding-right: 10%;
-        }
+    /* Seção email*/
+    section#email {
+        display: flex;
+        min-height: 70vh;
+        flex-direction: column;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
 
-        .dados {
-            padding-top: 8%;
-            width: 100%;
-            order: 2;
-        }
+    .dados {
+        padding-top: 8%;
+        width: 100%;
+        order: 2;
+    }
 
-        .txt-email {
-            width: 100%;
-            order: 1;
-        }
-    
-        .txt-email h2 {
-            font-size: 35px;
-            margin-bottom: 0;
-        }
-    
-        .txt-email p {
-            font-size: 16px;
-        }
-    
-        .txt-email img {
-            display: none;
-        }
-    
-        .dados button {
-            width: 22vh;
-        }
-    
-        .dados input { 
-            width: 100%;
-        }
-    
-        .dados label {
-            font-size: 15px;
-        }
+    .txt-email {
+        width: 100%;
+        order: 1;
+    }
+
+    .txt-email h2 {
+        font-size: 35px;
+        margin-bottom: 0;
+    }
+
+    .txt-email p {
+        font-size: 16px;
+    }
+
+    .txt-email img {
+        display: none;
+    }
+
+    .dados button {
+        width: 22vh;
+    }
+
+    .dados input {
+        width: 100%;
+    }
+
+    .dados label {
+        font-size: 15px;
+    }
+
+    /* EditalView */
+    .editalview {
+        margin: 6vh 5%;
+    }
+
+    .editalview h2 {
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .edital_top {
+        display: block;
+    }
+
+    .edital_img {
+        margin: 5vh 14%;
+    }
 }
 
 @media (max-width: 544px) {
@@ -991,6 +1079,24 @@ section#autoral {
     /* Seção Empresas*/
     section#empresas header h2 {
         font-size: 25px;
+    }
+
+    /* Edital View */
+
+    .editalview {
+        margin-top: 4vh;
+    }
+
+    .editalview h2 {
+        font-size: 19px;
+    }
+
+    .editalview h3 {
+        font-size: 18px;
+    }
+
+    .editalview h5 {
+        font-size: 16px;
     }
 
 }

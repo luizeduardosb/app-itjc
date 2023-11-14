@@ -3,17 +3,22 @@
 
 {% block content %}
 <div class="editalview">
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="offset-1 col-10 list-div">
-        <h1>{{edital.titulo}}</h1>
-        <h3>{{edital.subtitulo}}</h3>
-        <p>{{edital.materia}}</p>
-        <a href="{{edital.link}}"><button class="button-edital"><b>Edital</b></button></a>
-        <a href="{{edital.inscricao}}"><button class="button-edital"><b>Inscreva-se</b></button></a>
+    <div class="edital_top">
+        <div class="edital_titulo">
+            <h2>{{edital.titulo}}</h2>
+            <h3>{{edital.subtitulo}}</h3>
+            <h5>Situação: <b>{{edital.status}}</b></h5>
+        </div>
+        <div class="edital_img">
+            {% if edital.imagem %}
+            <img src="{{ edital.imagem.url }}" alt="Edital" />
+            {% else %}
+            <p>Nenhuma imagem disponível</p>
+            {% endif %}
+        </div>
     </div>
+    <p>{{edital.materia}}</p>
+    <a href="{{edital.link}}"><button class="button-edital view"><b>EDITAL</b></button></a>
+    <a href="{{edital.inscricao}}"><button class="button-edital view"><b>INSCREVA-SE</b></button></a>
 </div>
 {% endblock %}
