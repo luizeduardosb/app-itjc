@@ -6,6 +6,7 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('aplicacoes.urls')),
+    path('email/', include('enviarEmail.urls'))   
 ]
 
 if settings.DEBUG:
