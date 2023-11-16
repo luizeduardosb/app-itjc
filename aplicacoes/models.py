@@ -3,6 +3,7 @@ from django.db import models
 class Edital(models.Model):
 
     STATUS = (('em aberto', 'Em aberto'), ('encerrado', 'Encerrado'))
+    DESTAQUE = (('sim', 'sim'), ('nao', 'nao'))
 
     titulo = models.CharField(max_length=150)
     subtitulo = models.CharField(max_length=250)
@@ -10,7 +11,9 @@ class Edital(models.Model):
     link = models.TextField(null=True)
     inscricao = models.TextField(null=True)
     status = models.CharField(max_length=9, choices=STATUS,)
+    destaque = models.CharField(max_length=3, choices=DESTAQUE, blank=True)
     imagem = models.ImageField(upload_to='fotosEditais', null=True, blank=True, default='default.jpg')
+
 
     crated_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

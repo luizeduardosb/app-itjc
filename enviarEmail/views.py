@@ -7,4 +7,4 @@ def enviarEmail(request):
     subject = 'Teste automatização email'
     content = 'Teste automatização email da itjc usando django'
     send_mail(subject, content, config('EMAIL_HOST_USER'), ['mariasilvasouza268@gmail.com'])
-    return HttpResponse('ola')
+    return render(request, 'aplicacoes/home.html')

@@ -293,10 +293,26 @@ section#inicio-txt {
 .btn.btn-primary.inicio {
     background-color: #161f44;
     border: 0;
+    font-size: 12px;
 }
 
 .card-body.inicio {
     background-color: #D9D9D9;
+}
+
+p.card-text.inicio {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    font-weight: normal;
+    text-align: justify;
+}
+
+h5.card-title.inicio {
+    font-weight: bold;
+    font-size: 17px;
+    text-align: justify;
 }
 
 /* Seção Sobre */
@@ -350,13 +366,56 @@ section#sobre {
 /* Seção incubação */
 
 section#incubacao {
-    background-color: white;
+    background-color: #D9D9D9;
+    padding: 10vh 15%;
     margin: 0;
     width: 100%;
+    display: block;
+    text-align: center;
+    min-height: 90vh;
 }
 
+section#incubacao h2 {
+    font-weight: bold;
+    font-size: 5vh;
+}
+
+.incubacao{
+    display: flex;
+    padding-top: 2vh;
+}
+
+.incubacao h3 {
+    font-weight: bold;
+    padding-top: 2vh;
+}
+
+.incubacao p {
+    font-size: 3vh;
+}
+
+.hotel {
+    width: 50%;
+    padding: 3vh 7vh;
+}
+
+.processo {
+    width: 50%;
+    padding: 3vh 7vh;
+}
+
+.incubacao a {
+    text-decoration: none;
+    padding: 0.7vh 2.5vh;
+    background-color: black;
+    border-radius: 7px;
+    color: white;
+}
+
+/* Divisoria */
+
 section#divi {
-    background-color: #12477C;
+    background-color: #161f44;
     margin: 0;
     width: 100%;
     min-height: 5vh;
@@ -372,7 +431,8 @@ section#empresas {
     flex-direction: column;
     align-items: center;
     gap: 5vh;
-    background-color: white;
+    background-color: #D9D9D9;
+    min-height: 110vh;
 }
 
 .empresas {
@@ -477,7 +537,7 @@ section#email {
 .txt-email h2 {
     padding-bottom: 3%;
     font-size: 45px;
-    color: #12477C;
+    color: white;
     font-weight: bold;
     letter-spacing: 2px;
 }
@@ -512,6 +572,7 @@ section#editais {
     z-index: 1;
     padding-top: 3vh;
     background-color: #D9D9D9;
+    min-height: 110vh;
 }
 
 .editais {

@@ -23,16 +23,23 @@ ITJC
     </div>
 
     <div class="destaque inicio">
+      {% for edital in editais %}
+      {% if edital.destaque == 'sim' %}
       <div class="card inicio">
-        <img src="{% static 'img/exemplo.png' %}" class="card-img-top inicio" alt="..." />
+        {% if edital.imagem %}
+        <img src="{{ edital.imagem.url }}" class="card-img-top inicio" alt="{{edital.nome}}" />
+        {% else %}
+        <p>Nenhuma imagem disponível</p>
+        {% endif %}
+
         <div class="card-body inicio">
-          <h5 class="card-title inicio">Card title</h5>
-          <p class="card-text inicio">Some quick example text to build on the card title and make up the bulk of the
-            card's
-            content.</p>
-          <a href="#" class="btn btn-primary inicio">Go somewhere</a>
+          <h5 class="card-title inicio">{{ edital.titulo }}</h5>
+          <p class="card-text inicio">{{ edital.materia }}</p>
+          <a href="/edital/{{ edital.id }}" class="btn btn-primary inicio">SAIBA MAIS >></a>
         </div>
       </div>
+      {% endif %}
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -49,13 +56,31 @@ ITJC
 </section>
 
 <section id="incubacao">
+  <h2>Processos seletivos</h2>
 
+  <div class="incubacao">
+    <div class="hotel">
+      <img src="{% static 'img/not-pessoa.png' %}">
+      <h3>Hotel de Projetos</h3>
+      <p>O hotel de ideias é o primeiro processo seletivo, voltado para aqueles que tem apenas uma ideia empresarial no
+        papel. Nessa fase eles recebem orientação para verificar se são viáveis técnica, mercadológica e
+        financeiramente.</p>
+      <a href="/">Inscrever-se</a>
+    </div>
+
+    <div class="processo">
+      <img src="{% static 'img/mundo.png' %}" alt="">
+      <h3>Processo de incubação</h3>
+      <p>O Processo de Incubação é apenas para aqueles que já possuem o CNPJ. As empresas irão receber
+        consultoria e acessória nas áreas que eles possuem maior carência, para daí eles se desenvolverem melhor gerando
+        mais empregos e renda ajudando a sua comunidade.</p>
+      <a href="/">Inscrever-se</a>
+    </div>
+  </div>
 
 </section>
 
-<section id="divi">
-
-</section>
+<section id="divi"></section>
 
 <section id="empresas">
   <div class="empresas">
@@ -94,7 +119,7 @@ ITJC
     <br>
     <div id="email">
       <label for="">E-mail</label> <br>
-      <input required type="email" name="" id="" placeholder="seuemail@email.com">
+      <input required type="text" name="" id="email" placeholder="seuemail@email.com">
     </div>
     <br>
     <button>Enviar</button>
