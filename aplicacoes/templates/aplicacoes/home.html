@@ -80,7 +80,6 @@ ITJC
 
 </section>
 
-<section id="divi"></section>
 
 <section id="empresas">
   <div class="empresas">
@@ -111,20 +110,21 @@ ITJC
 </section>
 
 <section id="email">
-  <div class="dados">
+  <form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
     <div id="nome">
-      <label for="">Nome</label> <br>
-      <input required type="text" name="" id="" placeholder="Como podemos te chamar?">
-    </div>
-    <br>
-    <div id="email">
-      <label for="">E-mail</label> <br>
-      <input required type="text" name="" id="email" placeholder="seuemail@email.com">
-    </div>
-    <br>
-    <button>Enviar</button>
-  </div>
-
+        <label for="">Nome</label> <br>
+        <input required type="text" name="" id="" placeholder="Como podemos te chamar?">
+      </div>
+      <br>
+      <div id="email">
+        <label for="">E-mail</label> <br>
+        <input required type="text" name="" id="email" placeholder="seuemail@email.com">
+      </div>
+      <br>
+      <input id="botao-email" type="submit" value="Enviar">
+  </form>
   <div class="txt-email">
     <h2>Cadastre-se</h2>
     <p>Cadastre-se e seja o primeiro a receber noticias, informações e novos editais da incubadora</p>
