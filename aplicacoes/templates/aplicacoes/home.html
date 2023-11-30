@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}
+
 ITJC
 {% endblock %}
 
@@ -110,20 +111,16 @@ ITJC
 </section>
 
 <section id="email">
-  <form method="POST">
+  <form method="POST" action="{% url 'home' %}">
     {% csrf_token %}
     {{ form.as_p }}
-    <div id="nome">
-        <label for="">Nome</label> <br>
-        <input required type="text" name="" id="" placeholder="Como podemos te chamar?">
-      </div>
-      <br>
-      <div id="email">
-        <label for="">E-mail</label> <br>
-        <input required type="text" name="" id="email" placeholder="seuemail@email.com">
-      </div>
-      <br>
-      <input id="botao-email" type="submit" value="Enviar">
+    <input href='{% url "email-automatico" %}' id="botao-email" type="submit" value="Enviar">
+    <script>
+      document.getElementById('botao-email').addEventListener('click', function() {
+          window.location.href = '{% url "email-automatico" %}';
+          console.log('ahpaz')
+      });
+    </script>
   </form>
   <div class="txt-email">
     <h2>Cadastre-se</h2>

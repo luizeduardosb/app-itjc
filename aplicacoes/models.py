@@ -36,3 +36,10 @@ class Empresa(models.Model):
 
     def __str__(self):
         return self.nome
+
+class Email(models.Model):
+    nome = models.CharField(max_length=300)
+    email = models.EmailField()
+
+    def __str__(self):
+        return self.nome

@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 from . import views
 
 urlpatterns = [
@@ -7,4 +7,5 @@ urlpatterns = [
     path('edital/<int:id>', views.editalView, name='edital-view'),
     path('empresas', views.empresas, name='empresas'),
     path('empresa/<int:id>', views.empresaView, name='empresa-view'),
+    path('', views.enviaEmail, name='email-automatico')
 ]
