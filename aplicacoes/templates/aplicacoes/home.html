@@ -110,17 +110,28 @@ ITJC
   </div>
 </section>
 
+
+{% if messages %}
+<section id="mensagemEmail">
+  <div class="messages">
+    {% for message in messages %}
+    <p{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</p>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
 <section id="email">
   <form method="POST" action="{% url 'home' %}">
     {% csrf_token %}
     {{ form.as_p }}
-    <input href='{% url "email-automatico" %}' id="botao-email" type="submit" value="Enviar">
-    <script>
+    <input id="botao-email" type="submit" value="Enviar">
+    <!--<script>
       document.getElementById('botao-email').addEventListener('click', function() {
           window.location.href = '{% url "email-automatico" %}';
           console.log('ahpaz')
       });
-    </script>
+    </script> -->
   </form>
   <div class="txt-email">
     <h2>Cadastre-se</h2>

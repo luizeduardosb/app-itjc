@@ -384,7 +384,7 @@ section#incubacao h2 {
     font-size: 5vh;
 }
 
-.incubacao{
+.incubacao {
     display: flex;
     padding-top: 2vh;
 }
@@ -482,6 +482,36 @@ section#empresas header h2 {
 
 }
 
+/* Seção mensagem email */
+
+section#mensagemEmail {
+    margin: 0;
+    min-height: 5vh;
+    background-color: #161f44;
+    padding: 2vh 23% 0 23%;
+    display: block;
+}
+
+section#mensagemEmail p.success {
+    color: white;
+    background-color: #498F34;
+    border-radius: 5px;
+    padding: 0.5vh 2vh;
+    width: 100%;
+    font-size: 2vh;
+    margin: 0;
+}
+
+section#mensagemEmail p.error {
+    color: white;
+    background-color: rgb(135, 0, 0);
+    border-radius: 5px;
+    padding: 0.5vh 2vh;
+    width: 100%;
+    font-size: 2vh;
+    margin: 0;
+}
+
 /* Seção email */
 
 section#email {
@@ -491,8 +521,7 @@ section#email {
     color: #D9D9D9;
     margin: 0;
     min-height: 50vh;
-    padding-left: 20%;
-    padding-right: 20%;
+    padding: 0 20%;
 }
 
 form {
@@ -922,6 +951,11 @@ div.card.contato {
         font-size: 15px;
     }
 
+    /* Seção incubação */
+    section#incubacao {
+        padding: 10vh 10%;
+    }
+
     /* Seção Empresas*/
     #card-empresa {
         width: 32vw;
@@ -1038,6 +1072,11 @@ div.card.contato {
         font-size: 18px;
     }
 
+    /* Seção incubação */
+    section#incubacao {
+        padding: 10vh 5%;
+    }
+
     /* Seção Empresas */
 
     section#empresas header h2 {
@@ -1133,6 +1172,34 @@ div.card.contato {
         font-size: 25px;
     }
 
+    /* Seção incubação */
+    .incubacao {
+        display: block;
+        text-align: center;
+    }
+
+    .incubacao p {
+        font-size: 2.5vh;
+    }
+
+    .hotel {
+        width: 100%;
+        padding: 0
+    }
+
+    .hotel img {
+        width: 15vh;
+    }
+
+    .processo {
+        width: 100%;
+        padding-top: 8vh;
+    }
+
+    .processo img {
+        width: 15vh;
+    }
+
     /* Seção contatos */
 
     #ulContato {
@@ -1195,9 +1262,22 @@ div.card.contato {
         height: 140px;
     }
 
+    /* Seção inicio */
+    .txt-incubadora h4 {
+        font-size: 23px;
+    }
+
     /* Seção Sobre */
     section#sobre {
         min-height: 45vh;
+    }
+
+    /* Seção incubação */
+    section#incubacao {
+    }
+
+    .incubacao p {
+        
     }
 
     /* Seção Empresas*/
