@@ -122,7 +122,7 @@ ITJC
 {% endif %}
 
 <section id="email">
-  <form method="POST" action="{% url 'home' %}">
+  <form method="POST" action="{% url 'index' %}">
     {% csrf_token %}
     {{ form.as_p }}
     <input id="botao-email" type="submit" value="Enviar">

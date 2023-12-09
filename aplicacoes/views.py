@@ -21,11 +21,11 @@ def home(request):
             return redirect('/#mensagemEmail') 
     else:
         form = salvar()
-    return render(request, 'aplicacoes/home.html', {'editais': editais, 'empresas': empresas, 'form' : form})
+    return render(request, 'aplicacoes/index.html', {'editais': editais, 'empresas': empresas, 'form' : form})
 
 def editais(request):
     editais = Edital.objects.all()
-    return render(request, 'aplicacoes/home.html', {'editais': editais})
+    return render(request, 'aplicacoes/index.html', {'editais': editais})
 
 def editalView(request, id):
     edital = get_object_or_404(Edital, pk=id)
@@ -44,4 +44,4 @@ def enviaEmail(request):
     subject = 'Seu email foi cadastrado'
     content = 'Agora você irá receber todas as novas noticias, informações e novos editais da ITJC'
     send_mail(subject, content, config('EMAIL_HOST_USER'), ['luizeduardo00736@gmail.com'])
-    return render(request, 'aplicacoes/home.html')
+    return render(request, 'aplicacoes/index.html')
