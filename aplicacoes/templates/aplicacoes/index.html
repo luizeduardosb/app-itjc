@@ -103,6 +103,11 @@ ITJC
         <div class="card-body empresa">
           <h5 class="card-title"><b>{{ empresa.nome }}</b></h5>
           <p class="card-text">{{ empresa.descricao }}</p>
+          <div class="loc-empresa">
+            <i class="fa-solid fa-location-dot fa-xl"></i>
+            <p class="card-text">{{ empresa.localizacao }}</p>
+          </div>
+          <a href="{{ empresa.endereco_digital }}">Visitar</a>
         </div>
       </div>
       {% endfor %}
@@ -116,7 +121,7 @@ ITJC
   <div class="messages">
     {% for message in messages %}
     <p{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</p>
-    {% endfor %}
+      {% endfor %}
   </div>
 </section>
 {% endif %}
