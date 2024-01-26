@@ -1,29 +1,31 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import redirect, render, get_object_or_404
 from .models import Edital
 from .models import Empresa
 from .forms import salvar
 from django.core.mail import send_mail
 from decouple import config
+from django.contrib import messages
 
 def home(request):
-    editais = Edital.objects.all()
+    editais = Edital.objects.all().order_by('-created_at')
     empresas = Empresa.objects.all()
-
     if request.method == 'POST':
         form = salvar(request.POST)
         if form.is_valid():
-            form.save()
-            
-            enviaEmail(request)
-            form = salvar()
+            email = form.save(commit=False)
+            email.save()
+            messages.success(request, 'Email cadastrado! Verifique sua caixa de mensagem')
+            return redirect('/#mensagemEmail')
+        else:
+            messages.error(request, 'Os campos do formulario não foram preenchidos corretamente!')
+            return redirect('/#mensagemEmail') 
     else:
         form = salvar()
-
-    return render(request, 'aplicacoes/home.html', {'editais': editais, 'empresas': empresas, 'form' : form})
+    return render(request, 'aplicacoes/index.html', {'editais': editais, 'empresas': empresas, 'form' : form})
 
 def editais(request):
     editais = Edital.objects.all()
-    return render(request, 'aplicacoes/home.html', {'editais': editais})
+    return render(request, 'aplicacoes/index.html', {'editais': editais})
 
 def editalView(request, id):
     edital = get_object_or_404(Edital, pk=id)
@@ -39,7 +41,7 @@ def empresaView(request, id):
     return render(request, 'aplicacoes/empresa.html', {'empresa': empresa})
 
 def enviaEmail(request):
-    subject = 'Teste automatização email'
-    content = 'Teste automatização email da itjc usando django'
-    send_mail(subject, content, config('EMAIL_HOST_USER'), ['mariasilvasouza268@gmail.com'])
-    return render(request, 'aplicacoes/home.html')
+    subject = 'Seu email foi cadastrado'
+    content = 'Agora você irá receber todas as novas noticias, informações e novos editais da ITJC'
+    send_mail(subject, content, config('EMAIL_HOST_USER'), ['luizeduardo00736@gmail.com'])
+    return render(request, 'aplicacoes/index.html')

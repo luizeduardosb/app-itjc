@@ -103,6 +103,11 @@ ITJC
         <div class="card-body empresa">
           <h5 class="card-title"><b>{{ empresa.nome }}</b></h5>
           <p class="card-text">{{ empresa.descricao }}</p>
+          <div class="loc-empresa">
+            <i class="fa-solid fa-location-dot fa-xl"></i>
+            <p class="card-text">{{ empresa.localizacao }}</p>
+          </div>
+          <a href="{{ empresa.endereco_digital }}">Visitar</a>
         </div>
       </div>
       {% endfor %}
@@ -110,17 +115,28 @@ ITJC
   </div>
 </section>
 
+
+{% if messages %}
+<section id="mensagemEmail">
+  <div class="messages">
+    {% for message in messages %}
+    <p{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</p>
+      {% endfor %}
+  </div>
+</section>
+{% endif %}
+
 <section id="email">
-  <form method="POST" action="{% url 'home' %}">
+  <form method="POST" action="{% url 'index' %}">
     {% csrf_token %}
     {{ form.as_p }}
-    <input href='{% url "email-automatico" %}' id="botao-email" type="submit" value="Enviar">
-    <script>
+    <input id="botao-email" type="submit" value="Enviar">
+    <!--<script>
       document.getElementById('botao-email').addEventListener('click', function() {
           window.location.href = '{% url "email-automatico" %}';
           console.log('ahpaz')
       });
-    </script>
+    </script> -->
   </form>
   <div class="txt-email">
     <h2>Cadastre-se</h2>

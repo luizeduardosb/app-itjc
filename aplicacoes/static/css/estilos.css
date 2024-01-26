@@ -72,7 +72,7 @@ body::-webkit-scrollbar {
 }
 
 .container-fluid {
-    background-color: #0F4D91;
+    background-color: #12477C;
 }
 
 #itjc {
@@ -384,7 +384,7 @@ section#incubacao h2 {
     font-size: 5vh;
 }
 
-.incubacao{
+.incubacao {
     display: flex;
     padding-top: 2vh;
 }
@@ -457,14 +457,13 @@ section#empresas header h2 {
     width: 70vw;
     display: flex;
     flex-wrap: wrap !important;
-    gap: 2vw;
+    gap: 2.5vw;
     padding-bottom: 8vh;
 }
 
 #card-empresa {
     width: 21vw;
     border: 1px solid #adadad;
-    border-radius: 0;
     background: transparent;
 
 }
@@ -477,9 +476,67 @@ section#empresas header h2 {
 }
 
 #card-img-top {
-    width: 15vw;
+    width: 19vw;
     height: 12vw;
 
+}
+
+p.card-text {
+    line-height: 1.5;
+}
+
+.card-body.empresa {
+    padding: 0 2vh 3vh 2vh;
+}
+
+.loc-empresa {
+    display: flex;
+}
+
+.loc-empresa i {
+    width: 5%;
+    padding-top: 2vh;
+}
+
+.loc-empresa p {
+    width: 95%;
+    float: right;
+    padding-left: 1vh;
+    font-size: 13px;
+}
+
+.card-body.empresa a {
+    margin-top: 50%
+}
+
+/* Seção mensagem email */
+
+section#mensagemEmail {
+    margin: 0;
+    min-height: 5vh;
+    background-color: #161f44;
+    padding: 2vh 23% 0 23%;
+    display: block;
+}
+
+section#mensagemEmail p.success {
+    color: white;
+    background-color: #498F34;
+    border-radius: 5px;
+    padding: 0.5vh 2vh;
+    width: 100%;
+    font-size: 2vh;
+    margin: 0;
+}
+
+section#mensagemEmail p.error {
+    color: white;
+    background-color: rgb(135, 0, 0);
+    border-radius: 5px;
+    padding: 0.5vh 2vh;
+    width: 100%;
+    font-size: 2vh;
+    margin: 0;
 }
 
 /* Seção email */
@@ -491,14 +548,14 @@ section#email {
     color: #D9D9D9;
     margin: 0;
     min-height: 50vh;
-    padding-left: 20%;
-    padding-right: 20%;
+    padding: 0 20%;
 }
 
 form {
     width: 40%;
     display: block;
     align-items: center;
+    margin-right: 10vh;
 }
 
 form input {
@@ -506,7 +563,7 @@ form input {
     color: white;
     border-bottom: 2px solid #636363;
     background-color: #161f44;
-    width: 40vh;
+    width: 40vw;
     height: 5vh;
     outline: 0;
 }
@@ -529,6 +586,7 @@ form label {
     font-weight: bold;
     font-size: 17px;
     letter-spacing: 1px;
+    display: flex;
 }
 
 .txt-email {
@@ -671,6 +729,7 @@ section#editais h2 {
     border: 1px solid rgb(255, 255, 255, 0.8);
 }
 
+
 /* EditalView */
 .editalview {
     margin: 7vh 15%;
@@ -809,7 +868,12 @@ div.card.contato {
 
     #ulContato {
         display: block;
-        margin-left: 28%;
+        margin-left: 13%;
+        margin-right: 5%;
+    }
+
+    div.card.contato {
+        width: 90%;
     }
 
     /* Seção email*/
@@ -922,9 +986,19 @@ div.card.contato {
         font-size: 15px;
     }
 
+    /* Seção incubação */
+    section#incubacao {
+        padding: 10vh 10%;
+    }
+
     /* Seção Empresas*/
     #card-empresa {
         width: 32vw;
+    }
+
+    #card-img-top {
+        width: 85%;
+        height: 19vw;
     }
 
     /* Seção email*/
@@ -1038,8 +1112,12 @@ div.card.contato {
         font-size: 18px;
     }
 
-    /* Seção Empresas */
+    /* Seção incubação */
+    section#incubacao {
+        padding: 10vh 5%;
+    }
 
+    /* Seção Empresas */
     section#empresas header h2 {
         font-size: 30px;
     }
@@ -1048,19 +1126,30 @@ div.card.contato {
         width: 95%;
     }
 
+    #card-img-top {
+        width: 90%;
+        height: 40vw;
+    }
+
+    .card-body.empresa {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
     /* Seção email*/
     section#email {
         display: flex;
         min-height: 70vh;
         flex-direction: column;
-        padding-left: 10%;
-        padding-right: 10%;
+        padding-left: 8%;
+        padding-right: 8%;
     }
 
-    .dados {
+    form {
         padding-top: 8%;
         width: 100%;
         order: 2;
+        margin: 0;
     }
 
     .txt-email {
@@ -1081,15 +1170,15 @@ div.card.contato {
         display: none;
     }
 
-    .dados button {
+    form button {
         width: 22vh;
     }
 
-    .dados input {
+    form input {
         width: 100%;
     }
 
-    .dados label {
+    form label {
         font-size: 15px;
     }
 
@@ -1133,10 +1222,44 @@ div.card.contato {
         font-size: 25px;
     }
 
+    /* Seção incubação */
+    .incubacao {
+        display: block;
+        text-align: center;
+    }
+
+    .incubacao p {
+        font-size: 2.5vh;
+    }
+
+    .hotel {
+        width: 100%;
+        padding: 0
+    }
+
+    .hotel img {
+        width: 15vh;
+    }
+
+    .processo {
+        width: 100%;
+        padding-top: 8vh;
+    }
+
+    .processo img {
+        width: 15vh;
+    }
+
     /* Seção contatos */
 
     #ulContato {
-        margin-left: 22%;
+        display: block;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    div.card.contato {
+        width: 100%;
     }
 
     /* Seção Empresas*/
@@ -1195,9 +1318,22 @@ div.card.contato {
         height: 140px;
     }
 
+    /* Seção inicio */
+    .txt-incubadora h4 {
+        font-size: 23px;
+    }
+
     /* Seção Sobre */
     section#sobre {
         min-height: 45vh;
+    }
+
+    /* Seção incubação */
+    section#incubacao {
+    }
+
+    .incubacao p {
+        
     }
 
     /* Seção Empresas*/
@@ -1207,8 +1343,13 @@ div.card.contato {
     }
 
     /* Seção contatos */
-
     #ulContato {
-        margin-left: 0;
+        display: block;
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+
+    div.card.contato {
+        width: 100%;
     }
 }
