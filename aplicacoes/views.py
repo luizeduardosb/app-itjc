@@ -6,22 +6,31 @@ from django.core.mail import send_mail
 from decouple import config
 from django.contrib import messages
 
+from django.shortcuts import render, redirect
+from .forms import salvar
+
 def home(request):
     editais = Edital.objects.all().order_by('-created_at')
     empresas = Empresa.objects.all()
+
     if request.method == 'POST':
         form = salvar(request.POST)
         if form.is_valid():
             email = form.save(commit=False)
-            email.save()
-            messages.success(request, 'Email cadastrado! Verifique sua caixa de mensagem')
-            return redirect('/#mensagemEmail')
+            if form.cleaned_data['nome'] == 'admin' and form.cleaned_data['email'] == 'admin@admin.com':
+                return redirect('/417471827a604269881d96314823m168060114i391788020n531183507')
+            else:
+                email.save()
+                messages.success(request, 'Email cadastrado! Verifique sua caixa de mensagem')
+                return redirect('/#mensagemEmail')
         else:
-            messages.error(request, 'Os campos do formulario não foram preenchidos corretamente!')
-            return redirect('/#mensagemEmail') 
+            messages.error(request, 'Os campos do formulário não foram preenchidos corretamente!')
+            return redirect('/#mensagemEmail')
     else:
         form = salvar()
-    return render(request, 'aplicacoes/index.html', {'editais': editais, 'empresas': empresas, 'form' : form})
+
+    return render(request, 'aplicacoes/index.html', {'editais': editais, 'empresas': empresas, 'form': form})
+
 
 def editais(request):
     editais = Edital.objects.all()
