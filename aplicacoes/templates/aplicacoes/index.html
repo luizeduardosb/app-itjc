@@ -102,12 +102,14 @@ ITJC
 
         <div class="card-body empresa">
           <h5 class="card-title"><b>{{ empresa.nome }}</b></h5>
-          <p class="card-text">{{ empresa.descricao }}</p>
-          <div class="loc-empresa">
-            <i class="fa-solid fa-location-dot fa-xl"></i>
-            <p class="card-text">{{ empresa.localizacao }}</p>
-          </div>
-          <a href="{{ empresa.endereco_digital }}" target="_blank" rel="noopener noreferrer">Visitar</a>
+          <p class="card-text desc-empresa">{{ empresa.descricao }}</p>
+
+          {% if empresa.endereco_digital %}
+          <a href="{{ empresa.endereco_digital }}" id="visitar-empresa" target="_blank"
+            rel="noopener noreferrer">Visitar <i class="fa-solid fa-arrow-right" style="color: #636363;"></i></a>
+          {% else %}
+          <p class="erro-infos-empresa">O endereço digital desta empresa não está disponível</p>
+          {% endif %}
         </div>
       </div>
       {% endfor %}
@@ -152,7 +154,7 @@ ITJC
       {% for edital in editais %}
       <div class="edital-unitario">
         <div id="body-edital-unitario">
-          <div>
+          <div class="imagem-edital">
             {% if edital.imagem %}
             <img id="imagem-edital" src="{{ edital.imagem.url }}" alt="Edital" />
             {% else %}

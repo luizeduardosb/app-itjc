@@ -481,8 +481,28 @@ section#empresas header h2 {
 
 }
 
-p.card-text {
+p.card-text.desc-empresa {
+    font-weight: 500;
     line-height: 1.5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+#loc-empresa {
+    width: 95%;
+    float: right;
+    padding-left: 1vh;
+    font-size: 13px;
+    font-weight: 500;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 .card-body.empresa {
@@ -496,17 +516,25 @@ p.card-text {
 .loc-empresa i {
     width: 5%;
     padding-top: 2vh;
-}
-
-.loc-empresa p {
-    width: 95%;
-    float: right;
-    padding-left: 1vh;
-    font-size: 13px;
+    margin-bottom: 5vh;
 }
 
 .card-body.empresa a {
     margin-top: 50%
+}
+
+#visitar-empresa {
+    text-decoration: none;
+    color: #636363;
+}
+
+#visitar-empresa:hover {
+    color: black;
+    font-weight: bold;
+}
+
+.erro-infos-empresa {
+    font-size: 13px;
 }
 
 /* Seção mensagem email */
@@ -694,6 +722,14 @@ section#editais h2 {
     -webkit-box-orient: vertical;
 }
 
+.edital-unitario-materia h5 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
 #rodape-edital-unitario {
     display: flex;
     justify-content: flex-end;
@@ -701,7 +737,6 @@ section#editais h2 {
 
 .buttonSaibaMais {
     padding: 0.3rem;
-    width: 10vw;
     background: rgba(0, 0, 0, 0.4);
     border: 0;
     border-radius: 0.45vw;
@@ -806,12 +841,12 @@ div.card.contato {
 /* Direitos autorais */
 
 .autoral {
-    padding: 0.5vh 0;
-    background-color: white;
+    padding: 2vh 0;
+    background-color: #D9D9D9;
     text-align: center;
     margin: 0;
+    font-weight: 500;
 }
-
 
 /* Responsividade */
 
@@ -1008,6 +1043,20 @@ div.card.contato {
         min-height: 35vh;
     }
 
+    /* Seção Editais */
+
+    .buttonSaibaMais {
+        font-size: 1.8vh;
+    }
+
+    .editais {
+        margin: 0 8%;
+    }
+
+    #imagem-edital {
+        display: none;
+    }
+
     /* EditalView */
     .editalview {
         margin: 6vh 10%;
@@ -1030,6 +1079,14 @@ div.card.contato {
         margin: 0;
         width: 100%;
     }
+
+    .edital-unitario-materia span {
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+
 }
 
 @media (max-width: 680px) {
@@ -1182,6 +1239,20 @@ div.card.contato {
         font-size: 15px;
     }
 
+    /* Seção editais */
+    .edital-unitario-materia span {
+        font-size: 15px !important;
+    }
+
+    .editais {
+        margin: 0 7%;
+    }
+
+    .container-editais {
+        width: 100%;
+        max-height: 100vh;
+    }
+
     /* EditalView */
     .editalview {
         margin: 6vh 5%;
@@ -1285,6 +1356,12 @@ div.card.contato {
         font-size: 16px;
     }
 
+    /* Direitos autorais */
+    .autoral {
+        font-size: 14px;
+        text-align: left;
+        padding: 2% 8%;
+    }
 }
 
 @media (max-width: 450px) {
@@ -1329,12 +1406,9 @@ div.card.contato {
     }
 
     /* Seção incubação */
-    section#incubacao {
-    }
+    section#incubacao {}
 
-    .incubacao p {
-        
-    }
+    .incubacao p {}
 
     /* Seção Empresas*/
 
