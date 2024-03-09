@@ -260,11 +260,12 @@ section#inicio-txt {
     width: 100%;
     align-items: center;
     border: 3px solid #adadad;
-    border-radius: 0;
+    border-radius: 10px;
 }
 
 .card-img-top.inicio {
     width: 100%;
+    border-radius: 10px;
 }
 
 .btn.btn-primary.inicio {
@@ -275,6 +276,8 @@ section#inicio-txt {
 
 .card-body.inicio {
     background-color: #D9D9D9;
+    border-bottom-right-radius: 9px;
+    border-bottom-left-radius: 9px;
 }
 
 p.card-text.inicio {
@@ -363,6 +366,7 @@ section#incubacao h2 {
 
 .incubacao {
     display: flex;
+    flex-wrap: wrap;
     padding-top: 2vh;
 }
 
@@ -371,9 +375,6 @@ section#incubacao h2 {
     padding-top: 2vh;
 }
 
-.incubacao p {
-    font-size: 3vh;
-}
 
 .hotel {
     width: 50%;
@@ -383,6 +384,17 @@ section#incubacao h2 {
 .processo {
     width: 50%;
     padding: 3vh 7vh;
+    text-align: center;
+}
+
+.processo+.processo+.processo{
+    margin-top: 10vh;
+}
+
+.processo p {
+    font-size: 1.4vw;
+    text-align: start;
+    margin-bottom: 4vh;
 }
 
 .incubacao a {
@@ -712,9 +724,9 @@ section#editais h2 {
 }
 
 .buttonSaibaMais {
-    padding: 0.3rem;
-    background: rgba(0, 0, 0, 0.4);
-    border: 0;
+    padding: 0.4rem;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.4);
     border-radius: 0.45vw;
     font-size: 1.01vw;
 }
@@ -728,8 +740,8 @@ section#editais h2 {
 .button-edital {
     padding: 0.8% 3% 0.8% 3%;
     font-family: 'Poppins' !important;
-    background: rgba(0, 0, 0, 0.4);
-    border: 0;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.4);
     border-radius: 0.45vw;
     font-size: 1.2vw;
 }

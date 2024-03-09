@@ -1,6 +1,7 @@
 from django.shortcuts import redirect, render, get_object_or_404
 from .models import Edital
 from .models import Empresa
+from .models import Processos
 from .forms import salvar
 from django.core.mail import send_mail
 from decouple import config
@@ -12,6 +13,7 @@ from .forms import salvar
 def home(request):
     editais = Edital.objects.all().order_by('-created_at')
     empresas = Empresa.objects.all()
+    processos = Processos.objects.all() 
 
     if request.method == 'POST':
         form = salvar(request.POST)
@@ -29,7 +31,7 @@ def home(request):
     else:
         form = salvar()
 
-    return render(request, 'aplicacoes/index.html', {'editais': editais, 'empresas': empresas, 'form': form})
+    return render(request, 'aplicacoes/index.html', {'editais': editais, 'empresas': empresas, 'form': form, 'processos': processos})
 
 
 def editais(request):
@@ -54,3 +56,8 @@ def enviaEmail(request):
     content = 'Agora você irá receber todas as novas noticias, informações e novos editais da ITJC'
     send_mail(subject, content, config('EMAIL_HOST_USER'), ['luizeduardo00736@gmail.com'])
     return render(request, 'aplicacoes/index.html')
+
+def processos(request):
+    processos = Processos.objects.all()
+    return render(request, 'aplicacoes/index.html', {'process': processos})
+

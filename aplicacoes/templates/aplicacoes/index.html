@@ -60,23 +60,14 @@ ITJC
   <h2>Processos seletivos</h2>
 
   <div class="incubacao">
-    <div class="hotel">
-      <img src="{% static 'img/not-pessoa.png' %}">
-      <h3>Hotel de Projetos</h3>
-      <p>O hotel de ideias é o primeiro processo seletivo, voltado para aqueles que tem apenas uma ideia empresarial no
-        papel. Nessa fase eles recebem orientação para verificar se são viáveis técnica, mercadológica e
-        financeiramente.</p>
-      <a href="/">Inscrever-se</a>
-    </div>
-
-    <div class="processo">
-      <img src="{% static 'img/mundo.png' %}" alt="">
-      <h3>Processo de incubação</h3>
-      <p>O Processo de Incubação é apenas para aqueles que já possuem o CNPJ. As empresas irão receber
-        consultoria e acessória nas áreas que eles possuem maior carência, para daí eles se desenvolverem melhor gerando
-        mais empregos e renda ajudando a sua comunidade.</p>
-      <a href="/">Inscrever-se</a>
-    </div>
+    {% for processo in processos %}
+      <div class="processo">
+        <img src="{% static 'img/mundo.png' %}" alt="">
+        <h2>{{ processo.nome }}</h2>
+        <p>{{ processo.descricao }}</p>
+        <a href="{{ processo.link }}">Inscrever-se</a>
+      </div>
+    {% endfor %}
   </div>
 
 </section>
@@ -132,7 +123,7 @@ ITJC
   <form method="POST" action="{% url 'index' %}">
     {% csrf_token %}
     {{ form.as_p }}
-    <input id="botao-email" type="submit" value="Enviar">
+    <input id="botao-email" type="submit" value="Enviar"/>
     <!--<script>
       document.getElementById('botao-email').addEventListener('click', function() {
           window.location.href = '{% url "email-automatico" %}';

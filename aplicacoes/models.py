@@ -43,3 +43,12 @@ class Email(models.Model):
 
     def __str__(self):
         return self.nome
+    
+
+class Processos(models.Model):
+    nome = models.CharField(max_length=50)
+    link = models.TextField(null=True)
+    descricao = models.CharField(max_length=600)
+
+    def __str__(self):
+        return self.nome
