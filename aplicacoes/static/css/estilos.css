@@ -344,8 +344,15 @@ section#sobre {
     font-size: 20px;
     font-weight: bold;
     color: white;
-
 }
+
+.sobre button:hover {
+    font-size: 23px;
+    width: 36vh;
+    height: 8vh;
+}
+
+
 
 /* Seção incubação */
 
@@ -375,6 +382,10 @@ section#incubacao h2 {
     padding-top: 2vh;
 }
 
+.incubacao p {
+    font-size: 3vh;
+}
+
 
 .hotel {
     width: 50%;
@@ -387,15 +398,6 @@ section#incubacao h2 {
     text-align: center;
 }
 
-.processo+.processo+.processo{
-    margin-top: 10vh;
-}
-
-.processo p {
-    font-size: 1.4vw;
-    text-align: start;
-    margin-bottom: 4vh;
-}
 
 .incubacao a {
     text-decoration: none;
@@ -405,14 +407,13 @@ section#incubacao h2 {
     color: white;
 }
 
-/* Divisoria */
-
-section#divi {
-    background-color: #161f44;
-    margin: 0;
-    width: 100%;
-    min-height: 5vh;
+.incubacao a:hover {
+    background-color: #636363;
+    color: black;
+    font-weight: bold;
+    font-size: 2.3vh;
 }
+
 
 
 /* Section Empresa */
@@ -526,6 +527,8 @@ p.card-text.desc-empresa {
     font-size: 13px;
 }
 
+
+
 /* Seção mensagem email */
 
 section#mensagemEmail {
@@ -635,8 +638,13 @@ form label {
     height: 5vh;
     background-color: #12477C;
     font-weight: bold;
-    border: 2px solid #D9D9D9;
+    border: 1px solid #D9D9D9;
     color: #D9D9D9;
+}
+
+#botao-email:hover {
+    width: 21vh;
+    height: 6vh;
 }
 
 
@@ -679,6 +687,7 @@ section#editais h2 {
     box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.5);
     gap: 1vw;
     margin-bottom: 3vh;
+    margin-right: 2vh;
 }
 
 .edital-unitario div p {
@@ -780,7 +789,17 @@ section#editais h2 {
 }
 
 button.button-edital.view {
-    font-size: 2.5vh;
+    padding: 0.5rem;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 0.45vw;
+    font-size: 2vh;
+    font-weight: 400;
+
+}
+
+button.button-edital.view:hover {
+    background: rgba(0, 0, 0, 0.2);
 
 }
 
@@ -819,12 +838,21 @@ div.card.contato {
     font-size: 1.4vw;
 }
 
-.card-body-son {
+.card-body-son a {
     display: flex;
     align-items: center;
     gap: 0.5vw;
     margin-bottom: 2vh;
+    text-decoration: none;
+    color: #000 !important;
+    text-transform: none !important;
 }
+
+ul.nav.justify-content-center a:hover {
+    font-size: 2.3vh;
+}
+
+
 
 /* Direitos autorais */
 

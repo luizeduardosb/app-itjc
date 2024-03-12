@@ -46,9 +46,5 @@ class Email(models.Model):
     
 
 class Processos(models.Model):
-    nome = models.CharField(max_length=50)
-    link = models.TextField(null=True)
-    descricao = models.CharField(max_length=600)
-
-    def __str__(self):
-        return self.nome
+    link_hotel = models.TextField(null=True)
+    link_incubacao = models.TextField(null=True)
